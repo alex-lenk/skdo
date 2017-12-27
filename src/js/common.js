@@ -15,9 +15,9 @@ $(document).ready(function () {
 
     $(".ui-field").change(function () {
         if ($(this).val().trim().length) {
-            $(this).addClass("field-filled");
+            $(this).parent().addClass("field-filled");
         } else {
-            $(this).removeClass("field-filled");
+            $(this).parent().removeClass("field-filled");
         }
     });
 

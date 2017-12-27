@@ -84,8 +84,9 @@
   }
 }
 
-.field-filled, .ui-field:focus {
-  + .ui-label {
+.field-filled,
+.ui-field:focus + {
+  .ui-label {
     top: 5px;
     @include font-size(13px);
   }

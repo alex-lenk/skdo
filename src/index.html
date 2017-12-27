@@ -106,7 +106,7 @@
                         </ul>
                     </section>
                     <section class="news-section__general news-section__block"
-                             style="background-image: url(../img/example/img-ex.jpg);">
+                             style="background-image: url(img/example/img-ex.jpg);">
                         <div class="news-section__general-wrap">
                             <a href="#" class="news-section__btn btn-red btn">Новости</a>
                             <h4 class="home-content-h3"><a href="#">В Смоленске обсудили вопросы обеспечения исполнения
@@ -163,7 +163,7 @@
 
                 <div class="home-integrations row">
                     <section class="home-integrations__block news-section__general"
-                             style="background-image: url(../img/example/img-ex.jpg);">
+                             style="background-image: url(img/example/img-ex.jpg);">
                         <div class="news-section__general-wrap">
                             <a href="#" class="news-section__btn btn-red btn">Новости</a>
                             <h4 class="home-content-h3"><a href="#">В Смоленске обсудили вопросы обеспечения исполнения
@@ -222,7 +222,7 @@
                             электронной почты и наши
                             специалисты свяжутся с вами в ближайшее время</p>
                     </div>
-                    <div action="#" class="contact-us-content">
+                    <form action="#" class="contact-us-content">
                         <div class="contact-us-left">
                             <div class="ui-group">
                                 <select name="select">
@@ -266,7 +266,7 @@
                             </div>
                             <div class="ui-group">
                                 <label class="label-block">
-                                    <input type="checkbox" name="" class="checkbox-custom">
+                                    <input type="checkbox" name="checkbox" class="checkbox-custom">
                                     <span class="checkbox-custom-view label">
                                         Оставляя заявку на сайте skdo.ru, вы подтверждаете согласие с
                                         <a href="#">правилами обработки своих персональных данных</a>
@@ -275,7 +275,7 @@
                             </div>
                             <button class="btn-blue btn">Заказать звонок</button>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -331,7 +331,78 @@
             </div>
         </div>
     </div>
-    <footer class="footer">footer</footer>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <ul class="footer-menu list-unstyled">
+                    <li><a href="#" class="footer-link">О компании</a></li>
+                    <li><a href="#" class="footer-link">О системе</a></li>
+                    <li><a href="#" class="footer-link">Контакты</a></li>
+                </ul>
+                <ul class="footer-links list-unstyled">
+                    <li><a href="#" class="footer-link">О компании</a></li>
+                    <li><a href="#" class="footer-link">О системе</a></li>
+                    <li><a href="#" class="footer-link">Контакты</a></li>
+                </ul>
+                <div class="footer-shared">
+                    <ul class="social-list list-unstyled">
+                        <li><a href="#" rel="nofollow" target="_blank" class="social-list-icon vk-color">
+                            <svg class="vk">
+                                <use xlink:href="img/sprite.svg#vk"></use>
+                            </svg>
+                        </a></li>
+                        <li><a href="#" rel="nofollow" target="_blank" class="social-list-icon fb-color">
+                            <svg class="fb">
+                                <use xlink:href="img/sprite.svg#fb"></use>
+                            </svg>
+                        </a></li>
+                        <li><a href="#" rel="nofollow" target="_blank" class="social-list-icon yt-color">
+                            <svg class="yt">
+                                <use xlink:href="img/sprite.svg#yt"></use>
+                            </svg>
+                        </a></li>
+                        <li><a href="#" rel="nofollow" target="_blank" class="social-list-icon ig-color">
+                            <svg class="ig">
+                                <use xlink:href="img/sprite.svg#ig"></use>
+                            </svg>
+                        </a></li>
+                        <li><a href="#" rel="nofollow" target="_blank" class="social-list-icon tg-color">
+                            <svg class="telegram">
+                                <use xlink:href="img/sprite.svg#telegram"></use>
+                            </svg>
+                        </a></li>
+                    </ul>
+
+                    <div class="footer-subscription">
+                        <label class="footer-subscription-title" for="subscription-input">Следите за нами</label>
+                        <form action="#" class="ui-group">
+                            <input type="email" class="ui-field" id="subscription-input" required>
+                            <div class="ui-label">Подпишитесь на обновления</div>
+                            <button class="footer-subscription-send">
+                                <svg class="arrow">
+                                    <use xlink:href="img/sprite.svg#arrow"></use>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="footer-support">
+                    <div class="footer-support-address">Москва, Космодамианская наб., 4/22, стр. 4</div>
+                    <div class="footer-support-scheme"><a href="#">Схема проезда</a></div>
+                    <div><a href="#" rel="nofollow" class="footer-support-email">info@skdo.ru</a></div>
+                    <div class="footer-support-phone"><a href="#" rel="nofollow">8 800 700-79-97</a></div>
+                    <button class="btn-red btn">Обратный звонок</button>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Договор Оферты</a>
+                <a href="#">Антикоррупционная политика</a>
+                <div class="footer-copy">© 2017-2018 ООО «СКДО +». Все права защищены.</div>
+            </div>
+        </div>
+    </footer>
 </div>
 
 <!-- include "template/scripts.html" -->

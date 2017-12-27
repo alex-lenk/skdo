@@ -1,0 +1,142 @@
+.footer {
+  padding-top: 65px;
+  flex: 0 0 auto;
+  background-color: #fff;
+}
+
+.footer-top {
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-menu {
+  text-transform: uppercase;
+  font-weight: bold;
+  li:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+.footer-link {
+  line-height: 1;
+  @include font-size(18px);
+  &:not(:hover) {
+    color: #4a4643;
+  }
+}
+
+.footer-links {
+  li:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.footer-shared {
+  width: 100%;
+  max-width: 290px;
+}
+
+.footer-subscription {
+  .ui-label {
+    top: 17px;
+    left: 49px;
+    font-style: italic;
+    @include font-size(14px)
+  }
+  .field-filled, .ui-field:focus + {
+    .ui-label {
+      opacity: 0;
+    }
+  }
+  .ui-field {
+    height: 52px;
+    padding-top: 0;
+    padding-left: 49px;
+  }
+}
+
+.footer-subscription-title {
+  margin-bottom: 10px;
+}
+
+.footer-subscription-send {
+  padding: 0;
+  width: 45px;
+  height: 100%;
+  border: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  cursor: pointer;
+  .arrow {
+    width: 13px;
+    height: 13px;
+    top: 20px;
+    right: 20px;
+    fill: #959493;
+    position: absolute;
+    transition: fill 0.3s ease;
+  }
+  &:hover .arrow {
+    fill: $hoverLinkColor
+  }
+}
+
+.footer-support {
+  max-width: 300px;
+  .btn-red {
+    padding-top: 13px;
+    padding-bottom: 12px;
+  }
+}
+
+.footer-support-scheme {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  @include font-size(14px);
+  a {
+    color: $hoverLinkColor;
+    &:hover {
+      color: $linkColor
+    }
+  }
+}
+
+.footer-support-email:not(:hover) {
+  color: $mainColor;
+}
+
+.footer-support-phone {
+  margin-bottom: 17px;
+  @include font-size(30px);
+  a:not(:hover) {
+    color: $mainColor;
+  }
+}
+
+.footer-bottom {
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-top: 1px solid #c9c9c9;
+  display: flex;
+  align-items: center;
+  @include font-size(13px);
+  a {
+    &:not(:hover) {
+      color: $mainColor;
+    }
+    &:not(:last-of-type) {
+      margin-right: 60px;
+    }
+  }
+}
+
+.footer-copy {
+  margin-left: auto;
+}

@@ -1,0 +1,104 @@
+.social-list {
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-list-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  display: block;
+  border: 1px solid;
+  transition: all 0.3s ease;
+  svg {
+    fill: #fff;
+    transition: fill 0.3s ease;
+  }
+  &:hover {
+    background-color: #fff;
+    transform: scale(1.2);
+  }
+}
+
+.vk-color {
+  border-color: #537ca6;
+  background-color: #537ca6;
+  .vk {
+    width: 22px;
+    height: 22px;
+    top: 9px;
+    left: 7px;
+    position: absolute;
+  }
+
+  &:hover .vk {
+    fill: #537ca6;
+  }
+}
+
+.fb-color {
+  border-color: #2363a6;
+  background-color: #2363a6;
+  .fb {
+    width: 22px;
+    height: 22px;
+    top: 7px;
+    left: 8px;
+    position: absolute;
+  }
+
+  &:hover .fb {
+    fill: #2363a6;
+  }
+}
+
+.yt-color {
+  border-color: #dd1903;
+  background-color: #dd1903;
+  .yt {
+    width: 25px;
+    height: 25px;
+    top: 6px;
+    left: 7px;
+    position: absolute;
+  }
+
+  &:hover .yt {
+    fill: #dd1903;
+  }
+}
+
+.ig-color {
+  border-color: #de184c;
+  background-color: #de184c;
+  .ig {
+    width: 20px;
+    height: 20px;
+    top: 9px;
+    left: 9px;
+    position: absolute;
+  }
+
+  &:hover .ig {
+    fill: #de184c;
+  }
+}
+
+.tg-color {
+  border-color: #3aacd1;
+  background-color: #3aacd1;
+  .telegram {
+    width: 22px;
+    height: 22px;
+    top: 8px;
+    left: 6px;
+    position: absolute;
+  }
+
+  &:hover .telegram {
+    fill: #3aacd1;
+  }
+}
