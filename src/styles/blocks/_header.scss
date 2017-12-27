@@ -8,7 +8,7 @@
 
 .logo {
   width: 120px;
-  margin-right: 105px;
+  margin-right: 6%;
   flex: none;
   @include clearfix;
 }
@@ -24,9 +24,10 @@
   color: $mainColor;
   text-transform: uppercase;
   line-height: 1;
+  white-space: nowrap;
   @include font-size(17px);
   &:not(:last-child) {
-    margin-right: 40px;
+    margin-right: 8%;
   }
 }
 
