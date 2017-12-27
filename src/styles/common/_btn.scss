@@ -1,0 +1,49 @@
+@import "variables";
+@import "mixin";
+
+.btn {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  text-align: center;
+  cursor: pointer;
+  line-height: 1;
+  display: inline-block;
+  transition: all 0.3s ease;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+
+  &-light {
+    height: 42px;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 1;
+    font-weight: bold;
+    color: #fff;
+    border: 2px solid #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    @include font-size(16px);
+    &:hover {
+      color: $mainColor;
+      background-color: #fff;
+    }
+  }
+
+  &-red {
+    padding: 10px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1;
+    color: #fff;
+    background-color: $redColor;
+    border: 0;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    @include font-size(14px);
+    &:hover {
+      color: #fff;
+      background-color: #c1251e;
+    }
+  }
+}

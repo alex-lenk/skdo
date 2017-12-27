@@ -1,0 +1,47 @@
+.home-company {
+  min-height: 500px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  position: relative;
+  z-index: 5;
+  color: #fff;
+  &::before {
+    top: -80px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 160px);
+    background: url(../img/bg-about.jpg) no-repeat;
+    position: absolute;
+    content: '';
+    z-index: -1;
+  }
+  .container {
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: transparent;
+    text-align: center;
+  }
+  .read-more {
+    color: #ffffff;
+  }
+  .btn {
+    margin-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.home-company__title {
+  margin-bottom: 40px;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  font-weight: normal;
+  @include font-size(35px);
+}
+
+.home-company__text {
+  margin-bottom: 70px;
+  color: rgb(255, 255, 255);
+  line-height: 1.5;
+  @include font-size(20px);
+}

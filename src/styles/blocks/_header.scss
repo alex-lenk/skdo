@@ -1,0 +1,99 @@
+.header {
+  padding-top: 18px;
+  padding-bottom: 15px;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 120px;
+  margin-right: 105px;
+  flex: none;
+  @include clearfix;
+}
+
+.header-nav {
+}
+
+.menu {
+  display: flex;
+}
+
+.menu-item {
+  color: $mainColor;
+  text-transform: uppercase;
+  line-height: 1;
+  @include font-size(17px);
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+
+.menu-item__link {
+  color: inherit;
+}
+
+.submenu {
+  display: none;
+}
+
+.submenu-item {
+}
+
+.submenu-link {
+}
+
+.header-phone {
+  margin-left: auto;
+  margin-right: 40px;
+  color: #000;
+  font-weight: bold;
+  line-height: 1;
+  @include font-size(25px);
+}
+
+.header-phone__link {
+  color: inherit;
+}
+
+.header__back-call {
+  margin-right: 40px;
+}
+
+.header-login {
+  margin-right: 40px;
+  color: $grayColor;
+  @include font-size(17px);
+  .login {
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+    fill: $grayColor;
+    transition: all 0.3s linear;
+  }
+}
+
+.header-login__wrap {
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  &:hover .login {
+    fill: $hoverLinkColor;
+    transform: translateX(5px);
+  }
+}
+
+.header-search {
+  .magnifyings {
+    width: 21px;
+    height: 21px;
+    fill: $grayColor;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    &:hover {
+      fill: $hoverLinkColor;
+      transform: scale(1.1);
+    }
+  }
+}

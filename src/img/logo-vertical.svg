@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X8 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="63.1908mm" height="84.9844mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 1750 2354"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil3 {fill:#D12E27;fill-rule:nonzero}
+    .fil0 {fill:#9DD2F3;fill-rule:nonzero}
+    .fil4 {fill:#83D0F4;fill-rule:nonzero}
+    .fil2 {fill:#7AB6E4;fill-rule:nonzero}
+    .fil5 {fill:#4A4643;fill-rule:nonzero}
+    .fil1 {fill:#2C4896;fill-rule:nonzero}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_2048104845024">
+   <polygon class="fil0" points="829,738 0,738 0,2 829,2 "/>
+   <polygon class="fil1" points="829,1752 0,1752 0,830 829,830 "/>
+   <polygon class="fil2" points="922,457 1750,457 1750,1752 922,1752 "/>
+   <polygon class="fil3" points="1750,370 1382,370 1382,0 "/>
+   <polygon class="fil4" points="922,1 1290,1 1290,370 922,370 "/>
+   <path class="fil5" d="M395 2161c0,90 -22,116 -122,116l-150 0c-93,0 -123,-28 -123,-119l0 -96c0,-98 32,-126 131,-126l134 0c80,0 130,23 130,118l-81 0c0,-36 -18,-51 -65,-51l-103 0c-54,0 -65,9 -65,62l0 84c0,52 19,61 65,61l103 0c49,0 65,-9 65,-49l81 0z"/>
+   <polygon class="fil5" points="529,2062 577,2062 724,1936 845,1936 646,2094 853,2273 734,2273 578,2129 529,2129 529,2273 448,2273 448,1936 529,1936 "/>
+   <path class="fil5" d="M1196 2003l-179 0 0 111c0,37 -9,65 -28,92l207 0 0 -203zm-257 94l0 -161 337 0 0 270 38 0 0 148 -74 0 0 -81 -290 0 0 81 -74 0 0 -148 23 0c29,-28 40,-60 40,-109z"/>
+   <path class="fil5" d="M1500 2210l107 0c51,0 63,-11 63,-57l0 -90c0,-49 -17,-60 -65,-60l-104 0c-51,0 -65,13 -65,61l0 90c0,44 14,56 64,56zm128 67l-148 0c-90,0 -124,-33 -124,-115l0 -106c0,-92 32,-120 124,-120l148 0c84,0 122,25 122,120l0 106c0,84 -27,115 -122,115z"/>
+  </g>
+ </g>
+</svg>

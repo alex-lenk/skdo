@@ -1,0 +1,82 @@
+@import "mixin";
+@import "variables";
+
+.ui-placeholder {
+  @include hidePlaceholder {
+    opacity: 1;
+    font-size: 14px;
+    color: $mainColor;
+    transition: opacity 0.3s ease;
+  }
+  &:focus {
+    @include hidePlaceholder {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+  }
+}
+
+.ui-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.ui-field:not(.ui-textarea) {
+  height: 63px;
+}
+
+.ui-field {
+  width: 100%;
+  padding: 20px 23px 0;
+  border: 2px solid #d8d8d8;
+  background-color: #fff;
+  font-weight: normal;
+  color: #000;
+  display: block;
+  outline: none;
+  transition: all .3s ease;
+  @include font-size(17px);
+  &:focus {
+    border-color: $linkColor;
+    box-shadow: 0 0 8px rgba(#fff, .9);
+  }
+}
+
+.ui-textarea {
+  min-height: 138px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  resize: vertical;
+}
+
+.ui-label {
+  top: 20px;
+  left: 24px;
+  position: absolute;
+  margin-bottom: 0;
+  color: #86807b;
+  font-weight: normal;
+  display: inline-block;
+  pointer-events: none;
+  transition: all 0.3s linear;
+  @include font-size(16px);
+}
+
+.ui-label-red {
+  color: $redColor;
+}
+
+.file-style {
+  + .ui-label {
+    top: 4px;
+    left: 24px;
+    font-size: 13px;
+  }
+}
+
+.field-filled, .ui-field:focus {
+  + .ui-label {
+    top: 5px;
+    @include font-size(13px);
+  }
+}

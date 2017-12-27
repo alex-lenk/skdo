@@ -1,0 +1,150 @@
+.news-section {
+  margin-left: -20px;
+  margin-right: -20px;
+  @include clearfix;
+  .btn-red {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .btn-light {
+    height: 33px;
+  }
+  p {
+    margin-bottom: 20px;
+    font-weight: 300;
+    line-height: 23px;
+    @include font-size(18px);
+  }
+  .news-section__general {
+    margin-right: 385px;
+  }
+}
+
+.news-section__title {
+  margin-bottom: 15px;
+  color: #000;
+  font-weight: bold;
+  line-height: 1.15;
+  @include font-size(20px);
+}
+
+.news-section__block {
+  padding: 50px;
+}
+
+.news-section__general {
+  position: relative;
+  color: #fff;
+  a {
+    color: inherit;
+  }
+  &::before {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(#000, .7);
+    position: absolute;
+    content: '';
+  }
+  .home-content-h3 {
+    color: inherit;
+  }
+}
+
+.news-section__general-wrap {
+  position: relative;
+  z-index: 5;
+}
+
+.news-section__btn {
+  margin-bottom: 35px;
+}
+
+.news-section-half {
+  margin-right: 385px;
+  display: flex;
+  .news-section__block {
+    max-width: 50%;
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  .read-more {
+    margin-top: auto;
+  }
+}
+
+.news-section__analytics {
+  background-color: #e0e4e5;
+  .news-section__title a {
+    color: #000;
+  }
+}
+
+.news-section__services {
+  color: #fff;
+  background-color: $linkColor;
+  .news-section__title {
+    color: inherit;
+  }
+  a {
+    color: #fff
+  }
+}
+
+.news-section__events {
+  width: 385px;
+  padding: 50px 43px 0;
+  float: right;
+  .news-section__title {
+    margin-bottom: 11px;
+    a {
+      color: #000;
+    }
+  }
+  .news-section__btn {
+    margin-bottom: 40px;
+  }
+}
+
+.news-section__events-list {
+  li:not(:last-child) {
+    margin-bottom: 45px;
+  }
+}
+
+.news-section__events-data {
+  margin-bottom: 24px;
+  color: #848484;
+  line-height: 1;
+  @include font-size(18px);
+}
+
+#content_text {
+  overflow: hidden;
+}
+
+#shadow {
+  background: linear-gradient(rgba(255, 255, 255, 0), #7ab6e4);
+  height: 50px;
+  margin: -50px 0px 5px 0;
+  position: relative;
+  pointer-events: none;
+}
+
+.app-connect {
+  background-color: $hoverLinkColor;
+  form {
+    width: 92%;
+  }
+  .ui-field {
+    margin-bottom: 15px;
+    text-align: center;
+    padding-top: 0;
+    height: 42px;
+  }
+  .btn {
+    width: 100%;
+  }
+}
