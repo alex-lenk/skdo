@@ -37,13 +37,28 @@
     line-height: 1;
     color: #fff;
     background-color: $redColor;
-    border: 0;
     cursor: pointer;
     transition: all 0.3s linear;
     @include font-size(14px);
     &:hover {
       color: #fff;
       background-color: #c1251e;
+    }
+  }
+
+  &-blue {
+    padding: 10px 20px;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    background-color: $linkColor;
+    border: 2px solid $linkColor;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    @include font-size(18px);
+    &:hover {
+      color: $linkColor;
+      background-color: #fff;
     }
   }
 }

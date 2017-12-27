@@ -43,7 +43,7 @@
 }
 
 .ui-textarea {
-  min-height: 138px;
+  min-height: 224px;
   padding-top: 20px;
   padding-bottom: 20px;
   resize: vertical;
@@ -70,7 +70,17 @@
   + .ui-label {
     top: 4px;
     left: 24px;
-    font-size: 13px;
+    pointer-events: none;
+    @include font-size(13px);
+    + .telegram {
+      position: absolute;
+      top: 25px;
+      right: 16px;
+      width: 15px;
+      height: 15px;
+      fill: $linkColor;
+      pointer-events: none;
+    }
   }
 }
 
