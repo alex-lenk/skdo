@@ -30,7 +30,7 @@
         <div class="header-phone">
             <a href="tel:88007007997" class="header-phone__link" rel="nofollow">8 800 700-79-97</a>
         </div>
-        <button class="header__back-call btn-red btn">Обратный звонок</button>
+        <button class="header__back-call btn-red btn" data-toggle="modal" data-target="#myModal">Обратный звонок</button>
         <div class="header-login">
             <a href="#" rel="nofollow" class="header-login__wrap">
                 <svg class="login">
@@ -427,6 +427,52 @@
 </div>
 
 <!-- include "template/scripts.html" -->
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+                <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close">
+                    <svg class="cancel">
+                        <use xlink:href="img/sprite.svg#cancel"></use>
+                    </svg>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Заказ обратного звонка</h4>
+            <div class="modal-body">
+                <div class="ui-group">
+                    <input type="text" class="ui-field" required>
+                    <label class="ui-label">Ваше имя и фамилия<span class="ui-label-red">*</span></label>
+                </div>
+                <div class="ui-group">
+                    <input type="tel" class="ui-field" required>
+                    <label class="ui-label">Телефон<span class="ui-label-red">*</span></label>
+                </div>
+                <div class="ui-group">
+                    <select name="select">
+                        <option>Удобное для вас время</option>
+                        <option>Прямо сейчас</option>
+                        <option>Потом</option>
+                        <option>Завтра</option>
+                        <option>Вчера</option>
+                    </select>
+                    <label class="ui-label">Удобное для вас время</label>
+                </div>
+
+                <div class="specialist-contact">Наш специалист свяжется с вами</div>
+
+                <div class="ui-group">
+                    <label class="label-block">
+                        <input type="checkbox" name="checkbox" class="checkbox-custom">
+                        <span class="checkbox-custom-view label">
+                                        Оставляя заявку на сайте skdo.ru, вы подтверждаете согласие с
+                                        <a href="#">правилами обработки своих персональных данных</a>
+                                    </span>
+                    </label>
+                </div>
+                <button class="btn-blue btn">Заказать звонок</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
