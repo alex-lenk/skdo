@@ -22,5 +22,32 @@ $(document).ready(function () {
     });
 
     $('.file-style, select').styler();
+
+    var swiper = new Swiper('.partners-carousel', {
+        slidesPerView: 4,
+        spaceBetween: 50,
+        navigation: {
+            nextEl: '.partners-carousel-next',
+            prevEl: '.partners-carousel-prev'
+        },
+        breakpoints: {
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 40
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            },
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10
+            }
+        }
+    });
 });
 
