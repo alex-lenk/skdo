@@ -27,8 +27,9 @@
                 <li class="menu-item"><a href="#" class="menu-item__link">Контакты</a></li>
             </ul>
         </nav>
-        <div class="header-phone"><a href="tel:88007007997" class="header-phone__link" rel="nofollow">8 800
-            700-79-97</a></div>
+        <div class="header-phone">
+            <a href="tel:88007007997" class="header-phone__link" rel="nofollow">8 800 700-79-97</a>
+        </div>
         <button class="header__back-call btn-red btn">Обратный звонок</button>
         <div class="header-login">
             <a href="#" rel="nofollow" class="header-login__wrap">
@@ -38,12 +39,32 @@
                 Вход
             </a>
         </div>
-        <div class="header-search">
+        <div class="header-icon">
             <svg class="magnifyings">
                 <use xlink:href="img/sprite.svg#magnifyings"></use>
             </svg>
         </div>
     </header>
+
+    <div class="header-search container-fluid">
+        <div class="header-search-logo"><a href="#"><img src="img/logo-old.svg" alt="СКДО +"></a></div>
+
+        <form action="#" class="header-search-area">
+            <input type="search" class="header-search-field ui-placeholder" placeholder="Что вы хотите найти?">
+            <button class="header-search-btn">
+                <svg class="magnifyings">
+                    <use xlink:href="img/sprite.svg#magnifyings"></use>
+                </svg>
+            </button>
+        </form>
+
+        <div class="header-cancel">
+            <svg class="cancel">
+                <use xlink:href="img/sprite.svg#cancel"></use>
+            </svg>
+        </div>
+    </div>
+
     <div class="main-content">
         <section class="header-home">
             <div class="container">

@@ -84,16 +84,14 @@
   }
 }
 
-.header-search {
-  .magnifyings {
-    width: 21px;
-    height: 21px;
-    fill: $grayColor;
-    cursor: pointer;
-    transition: all 0.3s linear;
-    &:hover {
-      fill: $hoverLinkColor;
-      transform: scale(1.1);
-    }
+.header-icon .magnifyings {
+  width: 21px;
+  height: 21px;
+  fill: $grayColor;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  &:hover {
+    fill: $hoverLinkColor;
+    transform: scale(1.1);
   }
 }

@@ -49,5 +49,21 @@ $(document).ready(function () {
             }
         }
     });
+
+
+    var headerSearch = $('.header-search'),
+        headerSearchOpened = 'header-search-opened';
+
+    $('.header-icon').click(
+        function () {
+            headerSearch.toggleClass(headerSearchOpened);
+        }
+    );
+
+    $('.header-cancel').click(
+        function () {
+            headerSearch.removeClass(headerSearchOpened);
+        }
+    );
 });
 
