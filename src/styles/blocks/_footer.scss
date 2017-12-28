@@ -5,8 +5,6 @@
 }
 
 .footer-top {
-  margin-left: -20px;
-  margin-right: -20px;
   margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
@@ -56,6 +54,15 @@
     padding-top: 0;
     padding-left: 49px;
   }
+  .mail {
+    width: 19px;
+    height: 19px;
+    top: 16px;
+    left: 14px;
+    position: absolute;
+    fill: #d8d8d8;
+    pointer-events: none;
+  }
 }
 
 .footer-subscription-title {
@@ -86,12 +93,9 @@
   }
 }
 
-.footer-support {
-  max-width: 300px;
-  .btn-red {
-    padding-top: 13px;
-    padding-bottom: 12px;
-  }
+.footer-support .btn-red {
+  padding-top: 13px;
+  padding-bottom: 12px;
 }
 
 .footer-support-scheme {
@@ -112,28 +116,20 @@
 
 .footer-support-phone {
   margin-bottom: 17px;
-  @include font-size(30px);
   a:not(:hover) {
     color: $mainColor;
   }
 }
 
 .footer-bottom {
-  margin-left: -20px;
-  margin-right: -20px;
   padding-top: 30px;
   padding-bottom: 30px;
   border-top: 1px solid #c9c9c9;
   display: flex;
   align-items: center;
   @include font-size(13px);
-  a {
-    &:not(:hover) {
-      color: $mainColor;
-    }
-    &:not(:last-of-type) {
-      margin-right: 60px;
-    }
+  a:not(:hover) {
+    color: $mainColor;
   }
 }
 

@@ -3,7 +3,10 @@
 <!-- include "template/head.html" -->
 <body class="home">
 <div class="wrapper">
-    <header class="header container-fluid">
+    <header class="header">
+        <div class="nav-active">
+            <span>Открыть меню</span>
+        </div>
         <div class="logo">
             <a href="#">
                 <img src="img/logo-old.svg" alt="СКДО +">
@@ -14,7 +17,7 @@
                 <li class="menu-item menu-item-parent">
                     <a href="#" class="menu-item__link">Компания</a>
 
-                    <ul class="submenu">
+                    <ul class="submenu list-unstyled">
                         <li class="submenu-item">
                             <a class="submenu-link" href="#">Партнёры</a>
                         </li>
@@ -30,13 +33,18 @@
         <div class="header-phone">
             <a href="tel:88007007997" class="header-phone__link" rel="nofollow">8 800 700-79-97</a>
         </div>
-        <button class="header__back-call btn-red btn" data-toggle="modal" data-target="#back-call">Обратный звонок</button>
+        <button class="header__back-call btn-red btn" data-toggle="modal" data-target="#back-call">
+            <svg class="header__back-active phone-call">
+                <use xlink:href="img/sprite.svg#phone-call"></use>
+            </svg>
+            <span class="header__back-text">Обратный звонок</span>
+        </button>
         <div class="header-login">
             <a href="#" rel="nofollow" class="header-login__wrap">
                 <svg class="login">
                     <use xlink:href="img/sprite.svg#login"></use>
                 </svg>
-                Вход
+                <span>Вход</span>
             </a>
         </div>
         <div class="header-icon">
@@ -281,8 +289,8 @@
                             <div class="ui-group">
                                 <input type="file" class="file-style">
                                 <label class="ui-label">Прикрепить файл</label>
-                                <svg class="telegram">
-                                    <use xlink:href="img/sprite.svg#telegram"></use>
+                                <svg class="clip">
+                                    <use xlink:href="img/sprite.svg#clip"></use>
                                 </svg>
                             </div>
                             <div class="ui-group">
@@ -404,6 +412,9 @@
                                     <use xlink:href="img/sprite.svg#arrow"></use>
                                 </svg>
                             </button>
+                            <svg class="mail">
+                                <use xlink:href="img/sprite.svg#mail"></use>
+                            </svg>
                         </form>
                     </div>
                 </div>

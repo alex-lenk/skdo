@@ -16,8 +16,6 @@
     z-index: -1;
   }
   .container {
-    padding-left: 100px;
-    padding-right: 100px;
     background-color: transparent;
     text-align: center;
   }
@@ -43,5 +41,4 @@
   margin-bottom: 70px;
   color: rgb(255, 255, 255);
   line-height: 1.5;
-  @include font-size(20px);
 }

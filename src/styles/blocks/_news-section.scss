@@ -15,9 +15,6 @@
     line-height: 23px;
     @include font-size(18px);
   }
-  .news-section__general {
-    margin-right: 385px;
-  }
 }
 
 .news-section__title {
@@ -29,7 +26,8 @@
 }
 
 .news-section__block {
-  padding: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .news-section__general {
@@ -62,11 +60,8 @@
 }
 
 .news-section-half {
-  margin-right: 385px;
   display: flex;
   .news-section__block {
-    max-width: 50%;
-    flex-basis: 50%;
     display: flex;
     flex-direction: column;
   }
@@ -94,9 +89,7 @@
 }
 
 .news-section__events {
-  width: 385px;
   padding: 50px 43px 0;
-  float: right;
   .news-section__title {
     margin-bottom: 11px;
     a {

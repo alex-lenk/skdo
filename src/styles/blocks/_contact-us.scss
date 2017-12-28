@@ -9,8 +9,6 @@
 }
 .contact-us-head {
   padding: 45px 50px;
-  max-width: 33%;
-  flex-basis: 33%;
   background-color: $linkColor;
   color: #fff;
 }
@@ -28,22 +26,11 @@
 
 .contact-us-content {
   padding: 45px 25px;
-  max-width: 77%;
-  flex-basis: 77%;
   background-color: #fff;
   display: flex;
 }
 
-.contact-us-left {
-  padding: 0 25px;
-  max-width: 50%;
-  flex-basis: 50%;
-}
-
 .contact-us-right {
-  padding: 0 25px;
-  max-width: 50%;
-  flex-basis: 50%;
   .btn-blue {
     width: 100%;
     padding-top: 22px;

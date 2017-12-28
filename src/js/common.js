@@ -65,5 +65,13 @@ $(document).ready(function () {
             headerSearch.removeClass(headerSearchOpened);
         }
     );
+
+    var headerNav = $('.header-nav');
+
+    $('.nav-active').click(
+        function () {
+            headerNav.toggleClass('header-nav__open');
+        }
+    );
 });
 

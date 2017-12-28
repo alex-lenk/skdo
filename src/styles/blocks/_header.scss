@@ -1,6 +1,8 @@
 .header {
-  padding-top: 18px;
-  padding-bottom: 15px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
   flex: 0 0 auto;
   display: flex;
   align-items: center;
@@ -22,27 +24,14 @@
 
 .menu-item {
   color: $mainColor;
-  text-transform: uppercase;
   line-height: 1;
   white-space: nowrap;
-  @include font-size(17px);
-  &:not(:last-child) {
-    margin-right: 8%;
-  }
 }
 
 .menu-item__link {
   color: inherit;
-}
-
-.submenu {
-  display: none;
-}
-
-.submenu-item {
-}
-
-.submenu-link {
+  text-transform: uppercase;
+  @include font-size(17px);
 }
 
 .header-phone {
@@ -51,7 +40,7 @@
   color: #000;
   font-weight: bold;
   line-height: 1;
-  @include font-size(25px);
+  @include font-size(20px);
 }
 
 .header-phone__link {
@@ -95,4 +84,15 @@
     fill: $hoverLinkColor;
     transform: scale(1.1);
   }
+}
+
+.header__back-call:hover .header__back-active {
+  transform: scale(1.2);
+}
+
+.header__back-active {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+  transition: all 0.4s linear;
 }

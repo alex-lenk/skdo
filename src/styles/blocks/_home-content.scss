@@ -28,7 +28,8 @@
 }
 
 .home-integrations__block {
-  padding: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   flex: 1;
 }
 
@@ -39,7 +40,6 @@
 }
 
 .home-integrations__quest {
-  max-width: 385px;
   width: 100%;
   padding: 50px 55px;
   text-align: center;
