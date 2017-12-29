@@ -121,12 +121,6 @@
   }
 }
 
-.submenu-item {
-}
-
-.submenu-link {
-}
-
 .menu-item-parent {
   padding-right: 7px;
   position: relative;
@@ -153,4 +147,9 @@
       pointer-events: auto;
     }
   }
+}
+
+.header-support {
+  display: flex;
+  align-items: center;
 }

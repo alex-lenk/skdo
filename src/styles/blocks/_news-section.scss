@@ -12,7 +12,6 @@
   p {
     margin-bottom: 20px;
     font-weight: 300;
-    line-height: 23px;
     @include font-size(18px);
   }
 }
@@ -92,7 +91,7 @@
   padding: 50px 43px 0;
   .news-section__title {
     margin-bottom: 11px;
-    a {
+    a:not(:hover) {
       color: #000;
     }
   }
