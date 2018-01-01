@@ -154,11 +154,28 @@ body {
   border: 0;
   background-color: transparent;
   text-align: center;
-  cursor: pointer;
   line-height: 1;
   display: inline-block;
-  transition: all 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s linear;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif; }
+  .btn::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transition: all 0.6s;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+            transform: translateX(-50%) translateY(-50%) rotate(45deg); }
+  .btn span {
+    position: relative;
+    z-index: 4; }
   .btn-light {
     height: 42px;
     padding-left: 20px;
@@ -177,9 +194,13 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
     font-size: 1rem; }
+    .btn-light::after {
+      background: #fff; }
     .btn-light:hover {
-      color: #4b4644;
-      background-color: #fff; }
+      color: #4b4644; }
+      .btn-light:hover::after {
+        height: 250px;
+        opacity: 1; }
   .btn-red {
     padding: 10px 20px;
     font-weight: bold;
@@ -187,12 +208,14 @@ body {
     line-height: 1;
     color: #fff;
     background-color: #d12e27;
-    cursor: pointer;
-    transition: all 0.3s linear;
     font-size: 0.875rem; }
+    .btn-red::after {
+      background: #c1251e; }
     .btn-red:hover {
-      color: #fff;
-      background-color: #c1251e; }
+      color: #fff; }
+      .btn-red:hover::after {
+        height: 250px;
+        opacity: 1; }
   .btn-blue {
     padding: 10px 20px;
     font-weight: bold;
@@ -203,9 +226,13 @@ body {
     cursor: pointer;
     transition: all 0.3s linear;
     font-size: 1.125rem; }
-    .btn-blue:hover {
-      color: #7ab6e4;
+    .btn-blue::after {
       background-color: #fff; }
+    .btn-blue:hover {
+      color: #7ab6e4; }
+      .btn-blue:hover::after {
+        height: 280px;
+        opacity: 1; }
 
 .ui-placeholder:-moz-placeholder {
   opacity: 1;
