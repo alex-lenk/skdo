@@ -73,5 +73,25 @@ $(document).ready(function () {
             headerNav.toggleClass('header-nav__open');
         }
     );
+
+    $('.portfolio').isotope({
+        itemSelector: '.portfolio li'
+    });
+
+    $('#filter a').click(function(){
+        $('#filter a').removeClass('current');
+        $(this).addClass('current');
+        var selector = $(this).attr('data-filter');
+
+        $('.portfolio').isotope({
+            filter: selector,
+            animationOptions: {
+                duration: 1000,
+                easing: 'easeOutQuart',
+                queue: false
+            }
+        });
+        return false;
+    });
 });
 

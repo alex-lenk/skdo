@@ -14,7 +14,7 @@
   transition: all 0.3s linear;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   
-  &::after {
+  &::before {
     content: '';
     position: absolute;
     z-index: 1;
@@ -45,12 +45,12 @@
     justify-content: center;
     @include font-size(16px);
   
-    &::after {
+    &::before {
       background: #fff;
     }
     &:hover {
       color: $mainColor;
-      &::after {
+      &::before {
         height: 250px;
         opacity: 1;
       }
@@ -66,12 +66,12 @@
     background-color: $redColor;
     @include font-size(14px);
   
-    &::after {
+    &::before {
       background: #c1251e;
     }
     &:hover {
       color: #fff;
-      &::after {
+      &::before {
         height: 250px;
         opacity: 1;
       }
@@ -88,15 +88,52 @@
     cursor: pointer;
     transition: all 0.3s linear;
     @include font-size(18px);
-    &::after {
+    &::before {
       background-color: #fff;
     }
     &:hover {
       color: $linkColor;
-      &::after {
+      &::before {
         height: 280px;
         opacity: 1;
       }
     }
   }
+    
+    &-link {
+        height: 42px;
+        margin: 0 auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        line-height: 1;
+        color: $hoverLinkColor;
+        border: 2px solid $hoverLinkColor;
+        font-weight: normal;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        @include font-size(18px);
+    
+        &::before {
+            background: $hoverLinkColor;
+        }
+        &::after {
+            margin-left: 15px;
+            display: inline-block;
+            position: relative;
+            z-index: 2;
+            content: '+';
+            transition: color 0.3s linear;
+        }
+        &:hover {
+            color: #fff;
+            &::before {
+                height: 250px;
+                opacity: 1;
+            }
+            &::after {
+                color: #fff;
+            }
+        }
+    }
 }

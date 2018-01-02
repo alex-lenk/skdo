@@ -162,7 +162,7 @@ body {
   position: relative;
   transition: all 0.3s linear;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif; }
-  .btn::after {
+  .btn::before {
     content: '';
     position: absolute;
     z-index: 1;
@@ -195,11 +195,11 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
     font-size: 1rem; }
-    .btn-light::after {
+    .btn-light::before {
       background: #fff; }
     .btn-light:hover {
       color: #4b4644; }
-      .btn-light:hover::after {
+      .btn-light:hover::before {
         height: 250px;
         opacity: 1; }
   .btn-red {
@@ -210,11 +210,11 @@ body {
     color: #fff;
     background-color: #d12e27;
     font-size: 0.875rem; }
-    .btn-red::after {
+    .btn-red::before {
       background: #c1251e; }
     .btn-red:hover {
       color: #fff; }
-      .btn-red:hover::after {
+      .btn-red:hover::before {
         height: 250px;
         opacity: 1; }
   .btn-blue {
@@ -227,13 +227,48 @@ body {
     cursor: pointer;
     transition: all 0.3s linear;
     font-size: 1.125rem; }
-    .btn-blue::after {
+    .btn-blue::before {
       background-color: #fff; }
     .btn-blue:hover {
       color: #7ab6e4; }
-      .btn-blue:hover::after {
+      .btn-blue:hover::before {
         height: 280px;
         opacity: 1; }
+  .btn-link {
+    height: 42px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 1;
+    color: #2c4896;
+    border: 2px solid #2c4896;
+    font-weight: normal;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 1.125rem; }
+    .btn-link::before {
+      background: #2c4896; }
+    .btn-link::after {
+      margin-left: 15px;
+      display: inline-block;
+      position: relative;
+      z-index: 2;
+      content: '+';
+      transition: color 0.3s linear; }
+    .btn-link:hover {
+      color: #fff; }
+      .btn-link:hover::before {
+        height: 250px;
+        opacity: 1; }
+      .btn-link:hover::after {
+        color: #fff; }
 
 .ui-placeholder:-moz-placeholder {
   opacity: 1;
@@ -1193,6 +1228,114 @@ body {
   -webkit-transform: translateY(0);
           transform: translateY(0); }
 
+.news-filter {
+  margin-top: -57px;
+  padding: 36px 50px 0;
+  margin-bottom: 0;
+  list-style: none;
+  background-color: #fff;
+  position: relative;
+  z-index: 10; }
+
+.news-filter__item {
+  border: 1px solid;
+  font-size: 0.9375rem; }
+  .news-filter__item:not(.news-filter__active) {
+    color: #7a716e; }
+    .news-filter__item:not(.news-filter__active):hover {
+      border-color: #2c4896; }
+  .news-filter__item:not(:last-child) {
+    margin-right: 5px; }
+
+.news-filter__active {
+  color: #fff;
+  background-color: #7ab6e4;
+  border-color: #7ab6e4;
+  pointer-events: none; }
+
+.news-filter__text {
+  padding: 5px 22px 4px;
+  color: inherit;
+  display: block; }
+
+.news-list {
+  margin-bottom: 60px;
+  padding-left: 0;
+  list-style: none;
+  font-weight: 300;
+  font-size: 1.125rem; }
+
+.news-list__item {
+  padding: 50px;
+  background-color: #fff; }
+  .news-list__item:not(:last-of-type) {
+    margin-bottom: 25px; }
+
+.news-list__date {
+  margin-bottom: 20px;
+  color: #9f9f9f; }
+
+.news-list__title {
+  margin-bottom: 15px;
+  color: #4b4644;
+  font-weight: 300;
+  font-size: 2.0625rem; }
+  .news-list__title a:not(:hover) {
+    color: inherit; }
+
+.news-list__text {
+  margin-bottom: 30px; }
+
+.pagination-section {
+  margin-bottom: 110px; }
+
+.pagination {
+  width: 100%;
+  margin-top: -39px;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 1.25rem; }
+  .pagination li {
+    text-align: center; }
+    .pagination li:not(:last-child) {
+      margin-right: 10px; }
+    .pagination li:first-child a {
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg); }
+  .pagination .arrow {
+    width: 15px;
+    height: 15px;
+    fill: #4b4644;
+    top: 9px;
+    left: 9px;
+    position: absolute; }
+  .pagination a, .pagination span {
+    width: 34px;
+    height: 34px;
+    position: relative;
+    border-radius: 100%;
+    overflow: hidden;
+    display: block;
+    line-height: 34px;
+    transition: all 0.3s ease; }
+  .pagination a:not(:hover) {
+    color: #4b4644; }
+  .pagination a:hover {
+    background-color: #e1e1e1; }
+  .pagination .disabled {
+    cursor: default; }
+  .pagination .active span {
+    cursor: default;
+    color: #fff;
+    background-color: #2c4896; }
+
 .main-content {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
@@ -1339,61 +1482,3 @@ body {
     z-index: 5; }
   .header-page h1 {
     color: inherit; }
-
-.news-filter {
-  margin-top: -57px;
-  padding: 36px 50px 0;
-  margin-bottom: 0;
-  list-style: none;
-  background-color: #fff;
-  position: relative;
-  z-index: 10; }
-
-.news-filter__item {
-  border: 1px solid;
-  font-size: 0.9375rem; }
-  .news-filter__item:not(.news-filter__active) {
-    color: #7a716e; }
-    .news-filter__item:not(.news-filter__active):hover {
-      border-color: #2c4896; }
-  .news-filter__item:not(:last-child) {
-    margin-right: 5px; }
-
-.news-filter__active {
-  color: #fff;
-  background-color: #7ab6e4;
-  border-color: #7ab6e4;
-  pointer-events: none; }
-
-.news-filter__text {
-  padding: 5px 22px 4px;
-  color: inherit;
-  display: block; }
-
-.news-list {
-  margin-bottom: 60px;
-  padding-left: 0;
-  list-style: none;
-  font-weight: 300;
-  font-size: 1.125rem; }
-
-.news-list__item {
-  padding: 50px;
-  background-color: #fff; }
-  .news-list__item:not(:last-of-type) {
-    margin-bottom: 25px; }
-
-.news-list__date {
-  margin-bottom: 20px;
-  color: #9f9f9f; }
-
-.news-list__title {
-  margin-bottom: 15px;
-  color: #4b4644;
-  font-weight: 300;
-  font-size: 2.0625rem; }
-  .news-list__title a:not(:hover) {
-    color: inherit; }
-
-.news-list__text {
-  margin-bottom: 30px; }
