@@ -10,16 +10,12 @@
 
 .container {
   width: 100%;
-  padding-right: 20px;
-  padding-left: 20px;
   margin-right: auto;
   margin-left: auto;
 }
 
 .container-fluid {
   width: 100%;
-  padding-right: 20px;
-  padding-left: 20px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -1530,15 +1526,14 @@
   }
 }
 
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
-
 @media (min-width: 768px) {
   .container {
     max-width: 720px;
+  }
+  
+  .container-fluid, .container {
+    padding-right: 20px;
+    padding-left: 20px;
   }
 }
 
@@ -1558,5 +1553,16 @@
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
+  }
+}
+
+@media (max-width: 767px) {
+  .row {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .container-fluid, .container {
+    padding-right: 15px;
+    padding-left: 15px;
   }
 }

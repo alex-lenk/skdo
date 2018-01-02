@@ -1,5 +1,4 @@
 .news-filter {
-    margin-top: -57px;
     padding: 36px 50px 0;
     margin-bottom: 0;
     list-style: none;
@@ -16,9 +15,6 @@
         &:hover {
             border-color: $hoverLinkColor;
         }
-    }
-    &:not(:last-child) {
-        margin-right: 5px;
     }
 }
 
