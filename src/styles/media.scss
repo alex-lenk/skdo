@@ -345,7 +345,7 @@
     display: none;
   }
 
-  .menu-item:not(:last-child) {
+  .menu-item__level-1:not(:last-child) {
     margin-right: 6%;
   }
 
@@ -491,7 +491,7 @@
 }
 
 @media (min-width: 1440px) and (max-width: 1599px) {
-  .menu-item:not(:last-child) {
+  .menu-item__level-1:not(:last-child) {
     margin-right: 5%;
   }
 }

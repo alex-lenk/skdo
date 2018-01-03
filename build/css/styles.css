@@ -507,7 +507,7 @@ body {
   display: -ms-flexbox;
   display: flex; }
 
-.menu-item {
+.menu-item__level-1 {
   color: #4b4644;
   line-height: 1;
   white-space: nowrap; }
