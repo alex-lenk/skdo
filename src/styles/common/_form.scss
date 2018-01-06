@@ -91,3 +91,12 @@
     @include font-size(13px);
   }
 }
+
+.ajax_form .error {
+    margin-top: 10px;
+    line-height: 1.2;
+    font-size: 0.875rem;
+    display: inline-block;
+    color: $redColor !important;
+    @include font-size(14px);
+}
