@@ -9,6 +9,14 @@
     font-size: 0.8125rem; } }
 
 @media (max-width: 1199px) {
+  .vacancies-info__box {
+    padding: 30px 35px 35px; }
+  .contact-us-head {
+    padding: 35px; }
+  .contact-us-content {
+    padding: 35px 20px; }
+  .contact-us-left, .contact-us-right {
+    padding: 0 15px; }
   .header-support {
     margin-left: auto; }
   .news-section__events {
@@ -63,6 +71,11 @@
             transform: translateX(0); } }
 
 @media (max-width: 991px) {
+  .vacancies-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
   .news-section-half {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -70,7 +83,7 @@
             flex-direction: column; }
   .news-section-half .news-section__block {
     width: 100%; }
-  .contact-us-row {
+  .contact-us {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -111,6 +124,18 @@
     width: 100%; } }
 
 @media (max-width: 767px) {
+  .panel-heading .panel-heading__decor {
+    top: 50%;
+    right: 15px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
+  .panel-body {
+    padding: 0 15px 15px; }
+  .panel-heading {
+    padding: 25px 50px 20px 15px;
+    font-size: 1.25rem; }
+  .contact-us-left, .contact-us-right {
+    padding: 0; }
   .breadcrumbs {
     display: none; }
   .article-content {
@@ -272,6 +297,9 @@
     padding-right: 7%; } }
 
 @media (min-width: 1200px) {
+  .vacancies-info__box {
+    line-height: 1.5;
+    padding: 30px 50px 50px; }
   .header {
     padding-top: 18px;
     padding-bottom: 15px; }
@@ -296,6 +324,10 @@
     margin-right: -20px; } }
 
 @media (min-width: 992px) {
+  .vacancies-info__box {
+    max-width: calc(100% / 3);
+    -ms-flex-preferred-size: calc(100% / 3);
+        flex-basis: calc(100% / 3); }
   .home-company {
     padding-top: 70px;
     padding-bottom: 70px; }
@@ -320,15 +352,18 @@
     font-size: 1.875rem; } }
 
 @media (min-width: 768px) {
+  .panel {
+    min-height: 100px;
+    font-size: 1.125rem; }
   .news-filter {
     margin-top: -57px; }
   .news-filter__item:not(:last-child) {
     margin-right: 5px; }
   .pagination {
     margin-top: -39px; }
-  .is-holder {
+  .is-holder .header-page__wrap {
     text-align: center; }
-    .is-holder h1 {
+    .is-holder .header-page__wrap h1 {
       text-transform: uppercase; }
   .header-page {
     font-size: 1.25rem; }

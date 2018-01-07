@@ -17,6 +17,19 @@
 }
 
 @media (max-width: 1199px) {
+    .vacancies-info__box {
+        padding: 30px 35px 35px;
+    }
+    .contact-us-head {
+        padding: 35px;
+    }
+    .contact-us-content {
+        padding: 35px 20px;
+    }
+    .contact-us-left, .contact-us-right {
+        padding: 0 15px;
+    }
+  
   .header-support {
     margin-left: auto;
   }
@@ -82,13 +95,17 @@
 }
 
 @media (max-width: 991px) {
+    .vacancies-info {
+        flex-direction: column;
+    }
+    
   .news-section-half {
     flex-direction: column;
   }
   .news-section-half .news-section__block {
     width: 100%;
   }
-  .contact-us-row {
+  .contact-us {
     flex-direction: column;
   }
   .footer-support-phone {
@@ -137,15 +154,34 @@
 }
 
 @media (max-width: 767px) {
+    .panel-heading .panel-heading__decor {
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+    }
+    .panel-body {
+        padding: 0 15px 15px;
+    }
+    
+    .panel-heading {
+        padding: 25px 50px 20px 15px;
+        @include font-size(20px);
+    }
+    
+    .contact-us-left, .contact-us-right {
+        padding: 0;
+    }
+    
     .breadcrumbs {
         display: none;
     }
     .article-content {
         padding: 30px 15px;
     }
-        h1, .h1 {
-    @include font-size(30px);
-  }
+    
+    h1, .h1 {
+        @include font-size(30px);
+    }
     
     .header-page {
         @include font-size(18px);
@@ -346,6 +382,11 @@
 }
 
 @media (min-width: 1200px) {
+    .vacancies-info__box {
+        line-height: 1.5;
+        padding: 30px 50px 50px;
+    }
+    
   .header {
     padding-top: 18px;
     padding-bottom: 15px;
@@ -383,6 +424,11 @@
 }
 
 @media (min-width: 992px) {
+    .vacancies-info__box {
+        max-width: calc(100% / 3);
+        flex-basis: calc(100% / 3);
+    }
+    
   .home-company {
     padding-top: 70px;
     padding-bottom: 70px;
@@ -413,6 +459,11 @@
 }
 
 @media (min-width: 768px) {
+    .panel {
+        min-height: 100px;
+        @include font-size(18px);
+    }
+    
   .news-filter {
     margin-top: -57px;
   }
@@ -425,7 +476,7 @@
     margin-top: -39px;
   }
   
-  .is-holder {
+  .is-holder .header-page__wrap {
     text-align: center;
     h1 {
       text-transform: uppercase;

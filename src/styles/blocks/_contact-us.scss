@@ -1,12 +1,12 @@
 .contact-us {
+  margin-bottom: 60px;
   position: relative;
   z-index: 12;
-}
-.contact-us-row {
   display: flex;
   margin-left: -20px;
   margin-right: -20px;
 }
+
 .contact-us-head {
   padding: 45px 50px;
   background-color: $linkColor;

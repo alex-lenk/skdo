@@ -1,0 +1,19 @@
+.breadcrumbs {padding-top: 15px;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    display: flex;
+    align-self: flex-start;
+    li {
+        color: #d0d0d0;
+        @include font-size(15px);
+        &::after {
+            padding: 0 5px;
+            display: inline;
+            content: '/';
+        }
+    }
+    a {
+        color: inherit;
+    }
+}

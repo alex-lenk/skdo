@@ -1,0 +1,54 @@
+.vacancies-info {
+    margin-top: -60px;
+    margin-bottom: 50px;
+    background-color: #fff;
+    z-index: 10;
+    position: relative;
+    h2 {
+        margin-bottom: 10px;
+        color: inherit;
+        text-transform: none;
+        font-weight: 300;
+        @include font-size(35px)
+    }
+}
+
+.vacancies-info__box {
+    @include font-size(17px);
+    &::before {
+        height: 54px;
+        margin-bottom: 30px;
+        background-size: contain;
+        display: block;
+        content: '';
+    }
+}
+
+.vacancies-info__team {
+    background-color: #e0e4e5;
+    &::before {
+        width: 60px;
+        background: url(../img/team.svg) no-repeat center;
+    }
+}
+
+.vacancies-info__education {
+    color: #fff;
+    background-color: #7ab6e4;
+    &::before {
+        width: 58px;
+        background: url(../img/education.svg) no-repeat center;
+    }
+}
+
+.vacancies-info__work {
+    &::before {
+        width: 55px;
+        background: url(../img/work.svg) no-repeat center;
+    }
+}
+
+.vacancies-panel__price {
+    margin-bottom: 50px;
+    color: #abb0b1;
+}

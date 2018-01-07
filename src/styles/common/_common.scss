@@ -149,6 +149,33 @@ p {
     margin-bottom: 0;
     list-style: none;
   }
+  &-point, &-point__blue {
+    margin-bottom: 30px;
+    padding-left: 0;
+    list-style: none;
+    li {
+      padding-left: 35px;
+      position: relative;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+      &::before {
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        position: absolute;
+        left: 0;
+        top: 5px;
+        content: '';
+      }
+    }
+  }
+    &-point li::before {
+        background-color: $hoverLinkColor;
+    }
+    &-point__blue li::before {
+        background-color: $linkColor;
+    }
 }
 
 .clearfix {
