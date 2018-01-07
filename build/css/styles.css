@@ -818,7 +818,8 @@ body {
 
 .news-section__general {
   position: relative;
-  color: #fff; }
+  color: #fff;
+  background-image: url(../img/example/img-ex.jpg); }
   .news-section__general a {
     color: inherit; }
   .news-section__general::before {
