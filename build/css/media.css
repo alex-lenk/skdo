@@ -297,6 +297,8 @@
     padding-right: 7%; } }
 
 @media (min-width: 1200px) {
+  .footer-support-address {
+    white-space: nowrap; }
   .vacancies-info__box {
     line-height: 1.5;
     padding: 30px 50px 50px; }
