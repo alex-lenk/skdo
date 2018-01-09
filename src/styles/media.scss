@@ -469,7 +469,12 @@
   }
 
   .news-filter {
-    margin-top: -57px;
+    top: -57px;
+  }
+  .news-list__item {
+    top: -57px;
+    z-index: 15;
+    position: relative;
   }
 
   .news-filter__item:not(:last-child) {

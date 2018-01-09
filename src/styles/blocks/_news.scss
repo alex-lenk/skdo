@@ -32,7 +32,7 @@
 }
 
 .news-list {
-    margin-bottom: 60px;
+    margin-bottom: 0;
     padding-left: 0;
     list-style: none;
     font-weight: 300;
@@ -64,4 +64,8 @@
 
 .news-list__text {
     margin-bottom: 30px;
+}
+
+.read-source {
+    color: #9f9f9f;
 }

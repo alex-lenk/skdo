@@ -1372,7 +1372,7 @@ body {
   display: block; }
 
 .news-list {
-  margin-bottom: 60px;
+  margin-bottom: 0;
   padding-left: 0;
   list-style: none;
   font-weight: 300;
@@ -1399,8 +1399,11 @@ body {
 .news-list__text {
   margin-bottom: 30px; }
 
+.read-source {
+  color: #9f9f9f; }
+
 .pagination-section {
-  margin-bottom: 110px; }
+  margin-bottom: 60px; }
 
 .pagination {
   width: 100%;
