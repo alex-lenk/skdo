@@ -154,6 +154,18 @@
 }
 
 @media (max-width: 767px) {
+  .contacts-page h1 {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+  .contacts-page__map {
+    height: 200px;
+  }
+  .contacts-page__info {
+    padding: 15px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
   .panel-heading .panel-heading__decor {
     top: 50%;
     right: 15px;
@@ -463,6 +475,26 @@
 }
 
 @media (min-width: 768px) {
+  .contacts-page__wrap {
+    width: 100%;
+    height: 695px;
+    display: flex;
+  }
+  .contacts-page__map {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+
+  .contacts-page__info {
+    width: 380px;
+    padding: 30px 30px 15px;
+  }
+
+//*****************************
+
   .panel {
     min-height: 100px;
     @include font-size(18px);
