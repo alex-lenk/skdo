@@ -26,10 +26,8 @@
   }
 }
 
-.footer-links {
-  li:not(:last-child) {
-    margin-bottom: 30px;
-  }
+.footer-links li:not(:last-child) {
+    margin-bottom: 15px;
 }
 
 .footer-shared {
