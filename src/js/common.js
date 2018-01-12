@@ -74,24 +74,19 @@ $(document).ready(function () {
         }
     );
 
-    $('.portfolio').isotope({
-        itemSelector: '.portfolio li'
-    });
 
-    $('#filter a').click(function(){
-        $('#filter a').removeClass('current');
-        $(this).addClass('current');
-        var selector = $(this).attr('data-filter');
+    //навигация - плавный скроллинг к якорю
+    $(".home-integrations__quest .btn").on("click", function (event) {
+        event.preventDefault();
 
-        $('.portfolio').isotope({
-            filter: selector,
-            animationOptions: {
-                duration: 1000,
-                easing: 'easeOutQuart',
-                queue: false
-            }
-        });
-        return false;
+        //забираем идентификатор бока с атрибута href
+        var id  = $(this).attr('href'),
+
+            //узнаем высоту от начала страницы до блока на который ссылается якорь
+            top = $(id).offset().top;
+
+        //анимируем переход на расстояние - top за 1500 мс
+        $('body,html').animate({scrollTop: top}, 1500);
     });
 });
 
