@@ -1,15 +1,20 @@
-/*
 @font-face {
-    font-family: 'Ubuntu';
-    src: url('../fonts/Ubuntu.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: Calibri;
+  src: url('../fonts/calibri-bold.woff') format('woff'), url('../fonts/calibri-bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Ubuntu';
-    src: url('../fonts/Ubuntu-Medium.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
+  font-family: Calibri;
+  src: url('../fonts/calibri-light.woff') format('woff'), url('../fonts/calibri-light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
 }
-*/
+
+@font-face {
+  font-family: Calibri;
+  src: url('../fonts/calibri.woff') format('woff'), url('../fonts/calibri.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}

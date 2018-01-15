@@ -1,5 +1,23 @@
 @charset "UTF-8";
 /* common */
+@font-face {
+  font-family: Calibri;
+  src: url("../fonts/calibri-bold.woff") format("woff"), url("../fonts/calibri-bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: Calibri;
+  src: url("../fonts/calibri-light.woff") format("woff"), url("../fonts/calibri-light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: Calibri;
+  src: url("../fonts/calibri.woff") format("woff"), url("../fonts/calibri.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
 html, body {
   height: 100%; }
 
@@ -542,9 +560,10 @@ body {
 
 .header {
   width: 100%;
+  height: 75px;
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
   background-color: #fff;
   position: fixed;
   z-index: 90;
@@ -963,8 +982,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: -15px;
-  margin-right: -15px; }
+  margin-left: -20px;
+  margin-right: -20px; }
 
 .contacts-wrap {
   background-color: transparent; }
@@ -1212,7 +1231,8 @@ body {
   pointer-events: none; }
 
 .footer-subscription-title {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  font-weight: 400; }
 
 .footer-subscription-send {
   padding: 0;
@@ -1252,7 +1272,8 @@ body {
   color: #4b4644; }
 
 .footer-support-phone {
-  margin-bottom: 17px; }
+  margin-bottom: 17px;
+  font-weight: 400; }
   .footer-support-phone a:not(:hover) {
     color: #4b4644; }
 
@@ -1277,7 +1298,7 @@ body {
   width: 100%;
   padding-top: 18px;
   padding-bottom: 18px;
-  top: 70px;
+  top: 75px;
   left: 0;
   position: fixed;
   z-index: 20;
@@ -1526,6 +1547,30 @@ body {
   margin-bottom: 50px;
   color: #abb0b1; }
 
+#button-up {
+  display: none;
+  position: fixed;
+  right: 60px;
+  bottom: 50px;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  background-color: #7ab6e4;
+  z-index: 99;
+  cursor: pointer; }
+  #button-up::before {
+    position: absolute;
+    margin-top: -5px;
+    top: 50%;
+    right: 26px;
+    width: 18px;
+    height: 18px;
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    content: ''; }
+
 .main-content {
   padding-top: 75px;
   -webkit-box-flex: 1;
@@ -1534,7 +1579,7 @@ body {
 
 .read-more {
   color: #4b4644;
-  font-weight: 300;
+  font-weight: 400;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
