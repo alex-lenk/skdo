@@ -112,5 +112,22 @@ $(document).ready(function () {
         return false;
     });
 
+    // END
+
+
+    $('.submenu').css("display", "none");
+
+
+    var menuItemParent = $('.menu-item-parent');
+
+    menuItemParent.append('<span class="menu-item-decor"></span>');
+
+
+    $(function () {
+        $('.menu-item-decor').click(function () {
+            $(this).parent().toggleClass('opened-submenu');
+            $(this).parent().children('.submenu').toggle("slow");
+        });
+    });
 });
 

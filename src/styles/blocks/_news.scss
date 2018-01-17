@@ -1,71 +1,85 @@
 .news-filter {
-    padding: 36px 50px 0;
-    margin-bottom: 0;
-    list-style: none;
-    background-color: #fff;
-    position: relative;
-    z-index: 10;
+  padding: 36px 50px 0;
+  margin-bottom: 0;
+  list-style: none;
+  background-color: #fff;
+  position: relative;
+  z-index: 10;
+
+  display: flex;
+  flex-wrap: wrap-reverse;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  margin-right: -20px;
+  margin-left: -20px;
 }
 
 .news-filter__item {
-    border: 1px solid;
-    @include font-size(15px);
-    &:not(.news-filter__active) {
-        color: #7a716e;
-        &:hover {
-            border-color: $hoverLinkColor;
-        }
+  border: 1px solid;
+  @include font-size(15px);
+  &:not(.news-filter__active) {
+    color: #7a716e;
+    &:hover {
+      border-color: $hoverLinkColor;
     }
+  }
 }
 
 .news-filter__active {
-    color: #fff;
-    background-color: #7ab6e4;
-    border-color: #7ab6e4;
-    pointer-events: none;
+  color: #fff;
+  background-color: #7ab6e4;
+  border-color: #7ab6e4;
+  ~ .news-filter__active {
+    color: #7a716e;
+    background-color: transparent;
+    border-color: #7a716e;
+  }
 }
 
-.news-filter__text {
-    padding: 5px 22px 4px;
+.news-filter__link {
+  padding: 5px 22px 4px;
+  color: inherit;
+  display: block;
+  &:hover {
     color: inherit;
-    display: block;
+  }
 }
 
 .news-list {
-    margin-bottom: 0;
-    padding-left: 0;
-    list-style: none;
-    font-weight: 300;
-    @include font-size(18px);
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  font-weight: 300;
+  @include font-size(18px);
 }
 
 .news-list__item {
-    padding: 50px;
-    background-color: #fff;
-    &:not(:last-of-type) {
-        margin-bottom: 25px;
-    }
+  padding: 50px;
+  background-color: #fff;
+  &:not(:last-of-type) {
+    margin-bottom: 25px;
+  }
 }
 
 .news-list__date {
-    margin-bottom: 20px;
-    color: #9f9f9f;
+  margin-bottom: 20px;
+  color: #9f9f9f;
 }
 
 .news-list__title {
-    margin-bottom: 15px;
-    color: #4b4644;
-    font-weight: 300;
-    @include font-size(33px);
-    a:not(:hover) {
-        color: inherit;
-    }
+  margin-bottom: 15px;
+  color: #4b4644;
+  font-weight: 300;
+  @include font-size(33px);
+  a:not(:hover) {
+    color: inherit;
+  }
 }
 
 .news-list__text {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .read-source {
-    color: #9f9f9f;
+  color: #9f9f9f;
 }

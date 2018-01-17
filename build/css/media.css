@@ -23,6 +23,30 @@
       border-right-width: 2px; } }
 
 @media (max-width: 1199px) {
+  .menu-item-decor {
+    width: 40px;
+    height: 20px;
+    position: absolute;
+    right: -20px;
+    top: 10px;
+    z-index: 10;
+    display: block; }
+    .menu-item-decor::before {
+      width: 9px;
+      height: 9px;
+      border-bottom: 2px solid #000;
+      border-left: 2px solid #000;
+      display: block;
+      content: '';
+      -webkit-transform: rotate(-135deg);
+              transform: rotate(-135deg);
+      position: absolute;
+      right: 20px;
+      top: 6px;
+      transition: all 0.3s linear; }
+  .opened-submenu .menu-item-decor::before {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
   .vacancies-info__box {
     padding: 30px 35px 35px; }
   .contact-us-head {
@@ -80,8 +104,11 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
-    .menu li:not(:last-child) {
-      margin-bottom: 35px; }
+  .menu-item__link {
+    padding: 15px 0;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex; }
   .header-nav {
     width: 90%;
     height: 100%;
@@ -155,6 +182,12 @@
     width: 100%; } }
 
 @media (max-width: 767px) {
+  .news-section {
+    margin-left: -15px;
+    margin-right: -15px; }
+  .contact-us {
+    margin-left: -15px;
+    margin-right: -15px; }
   .contacts-page h1 {
     padding-top: 20px;
     padding-bottom: 30px; }
@@ -192,7 +225,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
-  .news-filter__item:not(:last-child) {
+  .news-filter__item:not(:first-child) {
     margin-bottom: 10px; }
   .pagination-section .show-more {
     margin-bottom: 50px; }
@@ -202,12 +235,12 @@
     padding-left: 15px;
     padding-right: 15px;
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start; }
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
   .news-list__item {
     padding-left: 15px;
     padding-right: 15px; }
@@ -317,6 +350,8 @@
     top: 60px; } }
 
 @media (max-width: 560px) {
+  .header-home__text {
+    line-height: 1.4; }
   .main-content {
     padding-top: 60px; }
   .header {
@@ -326,7 +361,8 @@
   .header-search-logo {
     display: none; }
   .header-home {
-    padding-top: 75px; }
+    height: 100vh;
+    padding-top: 60px; }
   .header-support {
     display: none; }
   .nav-active {
@@ -363,6 +399,37 @@
     padding-right: 7%; } }
 
 @media (min-width: 1200px) {
+  .submenu {
+    padding-top: 27px;
+    position: absolute;
+    z-index: 10;
+    top: 100%;
+    pointer-events: none;
+    opacity: 0;
+    display: block !important;
+    transition: all 0.3s ease; }
+  .menu-item-parent {
+    padding-right: 9px; }
+    .menu-item-parent:after {
+      width: 5px;
+      height: 5px;
+      border-bottom: 1px solid #000;
+      border-left: 1px solid #000;
+      display: block;
+      content: '';
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+      position: absolute;
+      right: -3px;
+      top: 7px;
+      transition: all 0.3s linear; }
+    .menu-item-parent:hover::after {
+      top: 8px;
+      -webkit-transform: rotate(135deg);
+              transform: rotate(135deg); }
+    .menu-item-parent:hover .submenu {
+      opacity: 1;
+      pointer-events: auto; }
   .nav-active-close, .nav-active {
     display: none; }
   .vacancies-info__box {
@@ -442,7 +509,7 @@
     top: -57px;
     z-index: 15;
     position: relative; }
-  .news-filter__item:not(:last-child) {
+  .news-filter__item:not(:first-child) {
     margin-right: 5px; }
   .pagination {
     margin-top: -39px; }
@@ -487,6 +554,17 @@
   .news-section__block, .home-integrations__block {
     padding-left: 50px;
     padding-right: 50px; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .news-filter__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    text-align: center; }
+  .news-filter__link {
+    padding-left: 5%;
+    padding-right: 5%;
+    white-space: nowrap; } }
 
 @media (min-width: 768px) and (max-width: 1200px) {
   .news-filter {

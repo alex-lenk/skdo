@@ -597,6 +597,7 @@ body {
           flex: 1; }
 
 .menu {
+  font-weight: 400;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
@@ -611,45 +612,17 @@ body {
   text-transform: uppercase;
   font-size: 1.0625rem; }
 
-.submenu {
-  opacity: 0;
-  padding-top: 27px;
-  position: absolute;
-  z-index: 10;
-  top: 100%;
-  pointer-events: none;
-  transition: all 0.3s ease; }
-  .submenu > li {
-    padding: 15px 50px;
-    background-color: #fff; }
-  .submenu a {
-    color: inherit; }
-    .submenu a:hover {
-      color: #2c4896; }
+.submenu > li {
+  padding: 15px 50px;
+  background-color: #fff; }
+
+.submenu a {
+  color: inherit; }
+  .submenu a:hover {
+    color: #2c4896; }
 
 .menu-item-parent {
-  padding-right: 7px;
   position: relative; }
-  .menu-item-parent:after {
-    width: 5px;
-    height: 5px;
-    border-bottom: 1px solid #000;
-    border-left: 1px solid #000;
-    display: block;
-    content: '';
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-    position: absolute;
-    right: -3px;
-    top: 8px;
-    transition: all 0.3s linear; }
-  .menu-item-parent:hover:after {
-    top: 6px;
-    -webkit-transform: rotate(135deg);
-            transform: rotate(135deg); }
-  .menu-item-parent:hover .submenu {
-    opacity: 1;
-    pointer-events: auto; }
 
 .header-support {
   display: -webkit-box;
@@ -1383,7 +1356,21 @@ body {
   list-style: none;
   background-color: #fff;
   position: relative;
-  z-index: 10; }
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: -20px;
+  margin-left: -20px; }
 
 .news-filter__item {
   border: 1px solid;
@@ -1396,13 +1383,18 @@ body {
 .news-filter__active {
   color: #fff;
   background-color: #7ab6e4;
-  border-color: #7ab6e4;
-  pointer-events: none; }
+  border-color: #7ab6e4; }
+  .news-filter__active ~ .news-filter__active {
+    color: #7a716e;
+    background-color: transparent;
+    border-color: #7a716e; }
 
-.news-filter__text {
+.news-filter__link {
   padding: 5px 22px 4px;
   color: inherit;
   display: block; }
+  .news-filter__link:hover {
+    color: inherit; }
 
 .news-list {
   margin-bottom: 0;
