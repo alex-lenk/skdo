@@ -152,33 +152,89 @@ p {
     margin-bottom: 0;
     list-style: none;
   }
-  &-point, &-point__blue {
-    margin-bottom: 30px;
-    padding-left: 0;
-    list-style: none;
-    li {
-      padding-left: 35px;
-      position: relative;
-      &:not(:last-child) {
-        margin-bottom: 14px;
-      }
-      &::before {
-        width: 10px;
-        height: 10px;
-        border-radius: 100%;
-        position: absolute;
-        left: 0;
-        top: 11px;
-        content: '';
-      }
+}
+
+.list-point,
+.list-point__blue,
+.article-content ul {
+  margin-bottom: 30px;
+  padding-left: 0;
+  list-style: none;
+  li {
+    padding-left: 35px;
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 14px;
+    }
+    &::before {
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      position: absolute;
+      left: 0;
+      top: 11px;
+      content: '';
     }
   }
-    &-point li::before {
-        background-color: $hoverLinkColor;
-    }
-    &-point__blue li::before {
-        background-color: $linkColor;
-    }
+}
+
+.list-point li::before,
+.article-content ul li::before {
+  background-color: $hoverLinkColor;
+}
+
+.list-point__blue li::before,
+.article-content .list-point__blue li::before {
+  background-color: $linkColor;
+}
+
+.article-content ol {
+  margin-bottom: 35px;
+  counter-reset: li;
+  padding-left: 0;
+  list-style: none;
+}
+
+.article-content  ol li {
+  position: relative;
+  padding-left: 35px;
+  &:not(:last-child) {
+    margin-bottom: 14px;
+  }
+}
+
+.article-content ol li:before {
+  content: counter(li); /* В качестве данных используем счетчик */
+  counter-increment: li; /* Увеличиваем значение счетчика на 1 */
+  /* Позиционируем и стилизируем цифры */
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  color: #fff;
+  background: $hoverLinkColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include font-size(18px);
+}
+
+blockquote {
+  padding-left: 60px;
+  font-style: oblique;
+  position: relative;
+  &::before {
+    width: 40px;
+    height: 30px;
+    top: 5px;
+    left: 0;
+    background: url(../img/blockquote.png) no-repeat;
+    background-size: contain;
+    position: absolute;
+    content: '';
+  }
 }
 
 .clearfix {
