@@ -23,6 +23,8 @@
 @import "blocks/pagination";
 @import "blocks/breadcrumbs";
 @import "blocks/vacancies";
+@import "blocks/services";
+@import "blocks/contacts-page";
 
 #button-up {
   display: none;
@@ -215,80 +217,4 @@
   margin-bottom: 2px;
   padding: 0 50px 30px;
   background-color: #fff;
-}
-
-//***********************
-
-.contacts-page h1 {
-  padding-top: 50px;
-  padding-bottom: 60px;
-  margin-bottom: 0;
-}
-
-.contacts-page__wrap {
-  margin-bottom: 60px;
-  position: relative;
-  overflow: hidden;
-  .container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-}
-
-.contacts-page__info {
-  padding: 30px 30px 15px;
-  color: #757270;
-  line-height: 1.4;
-  background-color: #fff;
-  position: relative;
-  z-index: 10;
-  p {
-    margin-bottom: 1em;
-  }
-}
-
-.contacts-page__map {
-  background: url(../img/example/map.jpg) no-repeat center;
-}
-
-.contacts-page__title {
-  margin-bottom: 15px;
-  color: #4a4643;
-  line-height: 1;
-  @include font-size(28px);
-}
-
-.contacts-page__block {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  color: #4a4643;
-  &::before, &::after {
-    width: 70px;
-    height: 2px;
-    background-color: #00a7da;
-    display: block;
-    content: '';
-  }
-  &::before {
-    margin-bottom: 10px;
-  }
-  &::after {
-    margin-top: 10px;
-  }
-  .time {
-    margin-bottom: 0;
-  }
-  .phone {
-    @include font-size(30px);
-    a {
-      color: inherit;
-    }
-  }
-  small {
-    line-height: 1.2;
-    display: block;
-    @include font-size(17px);
-  }
 }
