@@ -1,12 +1,10 @@
-@media (max-width: 1600px) {
+@media (max-width: 1599px) {
   .logo {
     width: 100px;
     margin-right: 4%; }
   .header__back-call {
     padding-right: 15px;
-    padding-left: 15px;
-    font-size: 13px;
-    font-size: 0.8125rem; } }
+    padding-left: 15px; } }
 
 @media (max-width: 1439px) {
   #button-up {
@@ -20,7 +18,9 @@
       width: 12px;
       height: 12px;
       border-top-width: 2px;
-      border-right-width: 2px; } }
+      border-right-width: 2px; }
+  .header__back-call {
+    font-size: 0.8125rem; } }
 
 @media (max-width: 1199px) {
   .menu-item-decor {
@@ -184,11 +184,6 @@
     width: 100%; } }
 
 @media (max-width: 767px) {
-  .news-filter {
-    padding: 30px 15px 0; }
-  .news-filter {
-    padding-bottom: 30px;
-    margin-bottom: 30px; }
   .pagination-section {
     padding-top: 50px; }
   .services-list {
@@ -247,8 +242,8 @@
   .news-list__title {
     font-size: 1.5rem; }
   .news-filter {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 30px 15px;
+    margin-bottom: 30px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
@@ -402,9 +397,13 @@
   .home-company::before {
     background-size: cover; } }
 
-@media (min-width: 1439px) {
+@media (min-width: 1440px) {
   .footer-support-address {
-    white-space: nowrap; } }
+    white-space: nowrap; }
+  .header-phone {
+    font-size: 1.5625rem; }
+  .header__back-call {
+    font-size: 0.875rem; } }
 
 @media (min-width: 1360px) {
   .header-home .container {
@@ -415,9 +414,7 @@
 
 @media (min-width: 1200px) {
   .news-filter {
-    padding: 36px 50px 0; }
-  .services-filter {
-    padding-bottom: 36px; }
+    padding: 36px 50px; }
   .submenu {
     padding-top: 27px;
     position: absolute;
@@ -525,9 +522,10 @@
     min-height: 100px;
     font-size: 1.125rem; }
   .news-filter {
-    top: -57px; }
+    margin-top: -25px;
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%); }
   .news-list__item {
-    top: -57px;
     z-index: 15;
     position: relative; }
   .news-filter__item:not(:first-child) {
@@ -596,12 +594,10 @@
 
 @media (min-width: 768px) and (max-width: 1199px) {
   .news-filter {
-    padding: 30px 30px 0; }
+    padding: 30px; }
   .news-list__item {
     padding-left: 30px;
-    padding-right: 30px; }
-  .services-filter {
-    padding-bottom: 30px; } }
+    padding-right: 30px; } }
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .services-list {

@@ -15,6 +15,7 @@
 
 .news-filter__item {
   border: 1px solid;
+  font-weight: 400;
   @include font-size(15px);
   &:not(.news-filter__active) {
     color: #7a716e;
@@ -45,7 +46,7 @@
 }
 
 .news-list {
-  margin-bottom: 0;
+  margin-bottom: 60px;
   padding-left: 0;
   list-style: none;
   font-weight: 300;
@@ -55,6 +56,10 @@
 .news-list__item {
   padding: 50px;
   background-color: #fff;
+  transition: box-shadow 0.3s ease;
+  &:hover {
+    box-shadow: 0 6px 21px rgba(176, 183, 210, 0.38);
+  }
   &:not(:last-of-type) {
     margin-bottom: 25px;
   }

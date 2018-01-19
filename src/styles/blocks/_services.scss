@@ -5,6 +5,10 @@
 
 .services-list__item {
   background-color: #fff;
+  transition: box-shadow 0.3s ease;
+  &:hover {
+    box-shadow: 0 6px 21px rgba(176, 183, 210, 0.38);
+  }
 }
 
 .services-list__media {

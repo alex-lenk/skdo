@@ -34,6 +34,7 @@ a, .as-link {
 input[type=text], input[type=submit], textarea {
   -webkit-appearance: none;
 }
+
 input::-webkit-contacts-auto-fill-button {
   visibility: hidden;
   display: none !important;
@@ -50,40 +51,45 @@ b, strong {
   font-weight: bold;
 }
 
+i, em {
+  font-style: oblique;
+}
+
 h1, .h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
-  color: #303030;
+  color: #4b4644;
+  font-weight: 400;
 }
 
 h1, .h1 {
-  margin-bottom: 16px;
-  font-weight: normal;
-  @include font-size(60px);
+  margin-bottom: 25px;
+  font-weight: 300;
+  @include font-size(33px);
 }
 
 h2 {
-  margin-bottom: 26px;
-  text-transform: uppercase;
-  @include font-size(24px);
+  margin-bottom: 25px;
+  @include font-size(28px);
 }
 
 h3 {
   margin-bottom: 30px;
   color: #000;
+  @include font-size(23px);
 }
 
 h4 {
   margin-bottom: 25px;
-  @include font-size(18px);
+  @include font-size(21px);
 }
 
 h5 {
-  @include font-size(16px);
+  @include font-size(19px);
 }
 
 h6 {
-  @include font-size(16px);
+  @include font-size(17px);
 }
 
 p {
@@ -169,7 +175,6 @@ p {
     &::before {
       width: 10px;
       height: 10px;
-      border-radius: 100%;
       position: absolute;
       left: 0;
       top: 11px;
@@ -195,7 +200,7 @@ p {
   list-style: none;
 }
 
-.article-content  ol li {
+.article-content ol li {
   position: relative;
   padding-left: 35px;
   &:not(:last-child) {
@@ -204,15 +209,13 @@ p {
 }
 
 .article-content ol li:before {
-  content: counter(li); /* В качестве данных используем счетчик */
-  counter-increment: li; /* Увеличиваем значение счетчика на 1 */
-  /* Позиционируем и стилизируем цифры */
+  content: counter(li);
+  counter-increment: li;
   position: absolute;
   top: 2px;
   left: 0;
   width: 24px;
   height: 24px;
-  border-radius: 100%;
   color: #fff;
   background: $hoverLinkColor;
   display: flex;

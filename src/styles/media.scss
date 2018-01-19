@@ -3,7 +3,7 @@
 @import "common/variables";
 @import "common/mixin";
 
-@media (max-width: 1600px) {
+@media (max-width: 1599px) {
   .logo {
     width: 100px;
     margin-right: 4%;
@@ -11,8 +11,6 @@
   .header__back-call {
     padding-right: 15px;
     padding-left: 15px;
-    font-size: 13px;
-    @include font-size(13px);
   }
 }
 
@@ -30,6 +28,9 @@
       border-top-width: 2px;
       border-right-width: 2px;
     }
+  }
+  .header__back-call {
+    @include font-size(13px);
   }
 }
 
@@ -228,15 +229,6 @@
 }
 
 @media (max-width: 767px) {
-  .news-filter {
-    padding: 30px 15px 0;
-  }
-
-  .news-filter {
-    padding-bottom: 30px;
-    margin-bottom: 30px;
-  }
-
   .pagination-section {
     padding-top: 50px;
   }
@@ -327,8 +319,8 @@
   }
 
   .news-filter {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 30px 15px;
+    margin-bottom: 30px;
     flex-direction: column-reverse;
     align-items: flex-end;
   }
@@ -524,9 +516,15 @@
   }
 }
 
-@media (min-width: 1439px) {
+@media (min-width: 1440px) {
   .footer-support-address {
     white-space: nowrap;
+  }
+  .header-phone {
+    @include font-size(25px)
+  }
+  .header__back-call {
+    @include font-size(14px);
   }
 }
 
@@ -543,10 +541,7 @@
 
 @media (min-width: 1200px) {
   .news-filter {
-    padding: 36px 50px 0;
-  }
-  .services-filter {
-    padding-bottom: 36px;
+    padding: 36px 50px;
   }
 
   .submenu {
@@ -692,10 +687,10 @@
   }
 
   .news-filter {
-    top: -57px;
+    margin-top: -25px;
+    transform: translateY(-25%);
   }
   .news-list__item {
-    top: -57px;
     z-index: 15;
     position: relative;
   }
@@ -781,15 +776,11 @@
 
 @media (min-width: 768px) and (max-width: 1199px) {
   .news-filter {
-    padding: 30px 30px 0;
+    padding: 30px;
   }
   .news-list__item {
     padding-left: 30px;
     padding-right: 30px;
-  }
-
-  .services-filter {
-    padding-bottom: 30px;
   }
 }
 

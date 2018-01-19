@@ -58,34 +58,38 @@ img {
 b, strong {
   font-weight: bold; }
 
+i, em {
+  font-style: oblique; }
+
 h1, .h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
-  color: #303030; }
+  color: #4b4644;
+  font-weight: 400; }
 
 h1, .h1 {
-  margin-bottom: 16px;
-  font-weight: normal;
-  font-size: 3.75rem; }
+  margin-bottom: 25px;
+  font-weight: 300;
+  font-size: 2.0625rem; }
 
 h2 {
-  margin-bottom: 26px;
-  text-transform: uppercase;
-  font-size: 1.5rem; }
+  margin-bottom: 25px;
+  font-size: 1.75rem; }
 
 h3 {
   margin-bottom: 30px;
-  color: #000; }
+  color: #000;
+  font-size: 1.4375rem; }
 
 h4 {
   margin-bottom: 25px;
-  font-size: 1.125rem; }
+  font-size: 1.3125rem; }
 
 h5 {
-  font-size: 1rem; }
+  font-size: 1.1875rem; }
 
 h6 {
-  font-size: 1rem; }
+  font-size: 1.0625rem; }
 
 p {
   margin-bottom: 1.5em; }
@@ -164,7 +168,6 @@ p {
     .article-content ul li::before {
       width: 10px;
       height: 10px;
-      border-radius: 100%;
       position: absolute;
       left: 0;
       top: 11px;
@@ -192,16 +195,12 @@ p {
 
 .article-content ol li:before {
   content: counter(li);
-  /* В качестве данных используем счетчик */
   counter-increment: li;
-  /* Увеличиваем значение счетчика на 1 */
-  /* Позиционируем и стилизируем цифры */
   position: absolute;
   top: 2px;
   left: 0;
   width: 24px;
   height: 24px;
-  border-radius: 100%;
   color: #fff;
   background: #2c4896;
   display: -webkit-box;
@@ -1321,7 +1320,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 0.8125rem; }
+  font-size: 0.875rem; }
   .footer-bottom a:not(:hover) {
     color: #4b4644; }
 
@@ -1381,14 +1380,15 @@ body {
   padding: 0;
   border: 0;
   background-color: transparent; }
-  .header-search-btn:hover .magnifyings {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1); }
   .header-search-btn .magnifyings {
     width: 20px;
     height: 20px;
     fill: #2A2928;
     transition: all 0.3s ease; }
+  .header-search-btn:hover .magnifyings {
+    fill: #2c4896;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
   .header-search-btn.inactive {
     color: #696767; }
 
@@ -1397,14 +1397,15 @@ body {
   cursor: pointer;
   -ms-flex-item-align: start;
       align-self: flex-start; }
-  .header-cancel:hover .cancel {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1); }
   .header-cancel .cancel {
     width: 18px;
     height: 18px;
     fill: #696767;
     transition: all 0.3s ease; }
+  .header-cancel:hover .cancel {
+    fill: #2c4896;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
 
 .header-search-opened {
   opacity: 1;
@@ -1434,6 +1435,7 @@ body {
 
 .news-filter__item {
   border: 1px solid;
+  font-weight: 400;
   font-size: 0.9375rem; }
   .news-filter__item:not(.news-filter__active) {
     color: #7a716e; }
@@ -1457,7 +1459,7 @@ body {
     color: inherit; }
 
 .news-list {
-  margin-bottom: 0;
+  margin-bottom: 60px;
   padding-left: 0;
   list-style: none;
   font-weight: 300;
@@ -1465,7 +1467,10 @@ body {
 
 .news-list__item {
   padding: 50px;
-  background-color: #fff; }
+  background-color: #fff;
+  transition: box-shadow 0.3s ease; }
+  .news-list__item:hover {
+    box-shadow: 0 6px 21px rgba(176, 183, 210, 0.38); }
   .news-list__item:not(:last-of-type) {
     margin-bottom: 25px; }
 
@@ -1606,7 +1611,10 @@ body {
           justify-content: space-between; }
 
 .services-list__item {
-  background-color: #fff; }
+  background-color: #fff;
+  transition: box-shadow 0.3s ease; }
+  .services-list__item:hover {
+    box-shadow: 0 6px 21px rgba(176, 183, 210, 0.38); }
 
 .services-list__media {
   width: 100%;
@@ -1734,7 +1742,8 @@ body {
   border-radius: 100%;
   background-color: #7ab6e4;
   z-index: 99;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: background-color 0.3s ease; }
   #button-up::before {
     position: absolute;
     margin-top: -5px;
@@ -1747,6 +1756,8 @@ body {
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
     content: ''; }
+  #button-up:hover {
+    background-color: #6faad7; }
 
 .main-content {
   padding-top: 75px;
@@ -1807,7 +1818,8 @@ body {
     position: relative;
     z-index: 5; }
   .header-page h1 {
-    color: inherit; }
+    color: inherit;
+    font-size: 3.75rem; }
 
 .header-page__wrap {
   margin: auto 0; }
