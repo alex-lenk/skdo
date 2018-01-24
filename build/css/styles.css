@@ -1669,7 +1669,8 @@ body {
 .contacts-page h1 {
   padding-top: 50px;
   padding-bottom: 60px;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  font-size: 3.75rem; }
 
 .contacts-page__wrap {
   margin-bottom: 60px;
