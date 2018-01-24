@@ -169,7 +169,7 @@ p {
       width: 10px;
       height: 10px;
       position: absolute;
-      left: 0;
+      left: 2px;
       top: 11px;
       content: ''; }
 
@@ -329,6 +329,7 @@ body {
     background-color: #7ab6e4;
     border: 2px solid #7ab6e4;
     cursor: pointer;
+    text-transform: uppercase;
     transition: all 0.3s linear;
     font-size: 1.125rem; }
     .btn-blue::before {
@@ -1044,7 +1045,8 @@ body {
 .contact-us-right .btn-blue {
   width: 100%;
   padding-top: 22px;
-  padding-bottom: 22px; }
+  padding-bottom: 22px;
+  font-size: 1.25rem; }
 
 .our-partners {
   padding-top: 5px;
@@ -1072,6 +1074,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
@@ -1902,3 +1906,23 @@ body {
   margin-bottom: 2px;
   padding: 0 50px 30px;
   background-color: #fff; }
+
+.article-content .partners-list {
+  padding-left: 0;
+  margin: 0 -15px;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .article-content .partners-list li {
+    padding: 15px; }
+    .article-content .partners-list li::before {
+      display: none; }

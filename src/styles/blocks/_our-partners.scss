@@ -27,6 +27,7 @@
 .partners-carousel__slide {
   text-align: center;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   @include font-size(14px);

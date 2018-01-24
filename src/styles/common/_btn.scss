@@ -86,6 +86,7 @@
     background-color: $linkColor;
     border: 2px solid $linkColor;
     cursor: pointer;
+    text-transform: uppercase;
     transition: all 0.3s linear;
     @include font-size(18px);
     &::before {
