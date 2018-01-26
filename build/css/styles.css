@@ -1056,10 +1056,10 @@ body {
   .our-partners .btn-red {
     margin-bottom: 55px; }
   .our-partners img {
-    margin-bottom: 13px;
     transition: opacity 0.3s ease; }
 
 .partners-carousel__text {
+  margin-top: 13px;
   font-weight: 300;
   color: #4b4644;
   font-size: 0.875rem;
@@ -1070,6 +1070,7 @@ body {
   height: 100%; }
 
 .partners-carousel__slide {
+  min-height: 114px;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;

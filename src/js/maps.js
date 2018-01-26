@@ -267,7 +267,7 @@ $(function () {
             balloonContent: "Мы находимся тут!"
         }, {
             iconLayout: "default#image",
-            iconImageHref: "../img/map-marker.png",
+            iconImageHref: "templates/img/map-marker.png",
             iconImageSize: [201, 70],
             iconImageOffset: [-175, -68]
         }),
