@@ -270,8 +270,9 @@ $(function () {
             iconImageHref: "templates/img/map-marker.png",
             iconImageSize: [201, 70],
             iconImageOffset: [-175, -68]
-        }),
-            e.geoObjects.add(myPlacemark)
+        });
+            e.geoObjects.add(myPlacemark);
+            e.controls.add('zoomControl');
         /*.add(myPlacemarkWithContent)*/
 
     })
