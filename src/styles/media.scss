@@ -3,7 +3,7 @@
 @import "common/variables";
 @import "common/mixin";
 
-@media (max-width: 1600px) {
+@media (max-width: 1599px) {
   .logo {
     width: 100px;
     margin-right: 4%;
@@ -11,25 +11,71 @@
   .header__back-call {
     padding-right: 15px;
     padding-left: 15px;
-    font-size: 13px;
+  }
+}
+
+@media (max-width: 1439px) {
+  #button-up {
+    right: 15px;
+    bottom: 50px;
+    width: 35px;
+    height: 35px;
+    &::before {
+      margin-top: -4px;
+      right: 11px;
+      width: 12px;
+      height: 12px;
+      border-top-width: 2px;
+      border-right-width: 2px;
+    }
+  }
+  .header__back-call {
     @include font-size(13px);
   }
 }
 
 @media (max-width: 1199px) {
-    .vacancies-info__box {
-        padding: 30px 35px 35px;
+  .menu-item-decor {
+    width: 40px;
+    height: 20px;
+    position: absolute;
+    right: -20px;
+    top: 10px;
+    z-index: 10;
+    display: block;
+    &::before {
+      width: 9px;
+      height: 9px;
+      border-bottom: 2px solid #000;
+      border-left: 2px solid #000;
+      display: block;
+      content: '';
+      transform: rotate(-135deg);
+      position: absolute;
+      right: 20px;
+      top: 6px;
+      transition: all 0.3s linear;
     }
-    .contact-us-head {
-        padding: 35px;
+  }
+  .opened-submenu {
+    .menu-item-decor::before {
+      transform: rotate(-45deg);
     }
-    .contact-us-content {
-        padding: 35px 20px;
-    }
-    .contact-us-left, .contact-us-right {
-        padding: 0 15px;
-    }
-  
+  }
+
+  .vacancies-info__box {
+    padding: 30px 35px 35px;
+  }
+  .contact-us-head {
+    padding: 35px;
+  }
+  .contact-us-content {
+    padding: 35px 20px;
+  }
+  .contact-us-left, .contact-us-right {
+    padding: 0 15px;
+  }
+
   .header-support {
     margin-left: auto;
   }
@@ -65,29 +111,54 @@
       position: absolute;
       background-color: #fff;
       content: '';
+      transition: all 0.3s ease;
       box-shadow: 0 9px 0 #fff, 0 -9px 0 #fff;
     }
     span {
       opacity: 0;
     }
+    .cancel {
+      width: 22px;
+      height: 22px;
+      fill: #fff;
+      position: absolute;
+      top: 20px;
+      left: 24px;
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+  }
+
+  .nav-active__open {
+    .cancel {
+      opacity: 1;
+    }
+    &::before {
+      transform: translateX(-300%);
+    }
   }
 
   .menu {
     flex-direction: column;
-    li:not(:last-child) {
-      margin-bottom: 35px;
-    }
   }
+
+  .menu-item__link {
+    padding: 15px 0;
+    display: inline-flex;
+  }
+
   .header-nav {
-    top: 111px;
+    width: 300px;
+    height: 100%;
+    top: 75px;
     left: 0;
-    padding: 40px;
+    padding: 20px;
     background-color: #fff;
-    position: absolute;
+    position: fixed;
     z-index: 12;
     transform: translateX(-100%);
     transition: transform 0.5s cubic-bezier(0, 0, 0.2, 1);
-      box-shadow: 0 0 5px rgba(#000,.2);
+    box-shadow: 1px 5px 5px rgba(#000, .2);
   }
   .header-nav__open {
     transform: translateX(0);
@@ -95,10 +166,14 @@
 }
 
 @media (max-width: 991px) {
-    .vacancies-info {
-        flex-direction: column;
-    }
-    
+  .services-list__item {
+    margin-bottom: 30px;
+  }
+
+  .vacancies-info {
+    flex-direction: column;
+  }
+
   .news-section-half {
     flex-direction: column;
   }
@@ -154,71 +229,106 @@
 }
 
 @media (max-width: 767px) {
-    .panel-heading .panel-heading__decor {
-        top: 50%;
-        right: 15px;
-        transform: translateY(-50%);
+  .pagination-section {
+    padding-top: 50px;
+  }
+
+  .services-list {
+    padding: 0 15px;
+  }
+  .services-list__content {
+    padding: 15px;
+  }
+  .services-list__title {
+    padding: 0 15px;
+  }
+
+  .news-section {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .contact-us {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .contacts-page h1 {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+  .contacts-page__map {
+    height: 200px;
+  }
+  .contacts-page__info {
+    padding: 15px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .panel-heading .panel-heading__decor {
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+  }
+  .panel-body {
+    padding: 0 15px 15px;
+  }
+
+  .panel-heading {
+    padding: 25px 50px 20px 15px;
+    @include font-size(20px);
+  }
+
+  .contact-us-left, .contact-us-right {
+    padding: 0;
+  }
+
+  .breadcrumbs {
+    display: none;
+  }
+  .article-content {
+    padding: 30px 15px;
+  }
+
+  h1, .h1 {
+    @include font-size(30px);
+  }
+
+  .header-page {
+    @include font-size(18px);
+    .container {
+      min-height: 395px;
+      padding-top: 75px;
+      padding-bottom: 50px;
     }
-    .panel-body {
-        padding: 0 15px 15px;
-    }
-    
-    .panel-heading {
-        padding: 25px 50px 20px 15px;
-        @include font-size(20px);
-    }
-    
-    .contact-us-left, .contact-us-right {
-        padding: 0;
-    }
-    
-    .breadcrumbs {
-        display: none;
-    }
-    .article-content {
-        padding: 30px 15px;
-    }
-    
-    h1, .h1 {
-        @include font-size(30px);
-    }
-    
-    .header-page {
-        @include font-size(18px);
-        .container {
-            min-height: 395px;
-            padding-top: 75px;
-            padding-bottom: 50px;
-        }
-    }
-  
+  }
+
   .pagination {
     justify-content: center;
   }
-  
-  .news-filter__item:not(:last-child) {
+
+  .news-filter__item:not(:first-child) {
     margin-bottom: 10px;
   }
-  
+
   .pagination-section .show-more {
     margin-bottom: 50px;
   }
-  
+
   .news-list__title {
     @include font-size(24px);
   }
-  
+
   .news-filter {
-    padding-left: 15px;
-    padding-right: 15px;
-    flex-direction: column;
-    align-items: flex-start;
+    padding: 30px 15px;
+    margin-bottom: 30px;
+    flex-direction: column-reverse;
+    align-items: flex-end;
   }
   .news-list__item {
     padding-left: 15px;
     padding-right: 15px;
   }
-  
+
   .modal-content {
     padding: 20px;
   }
@@ -280,7 +390,7 @@
     flex-direction: column;
     align-items: center;
   }
-  
+
   .header-phone {
     display: none;
   }
@@ -288,8 +398,8 @@
     margin-right: auto;
   }
   .home-integrations__block, .news-section__events, .news-section__block, .contact-us-head, .contact-us-content {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   .footer-shared {
     max-width: 100%;
@@ -322,7 +432,50 @@
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 650px) {
+  .header-support {
+    flex-direction: column;
+  }
+  .header__back-call {
+    color: #d12e27;
+    margin-top: 5px;
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
+@media (max-width: 567px) {
+  .article-content {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .header-nav {
+    top: 60px;
+  }
+  .services-list__item {
+    width: 100%;
+  }
+
+  .header {
+    height: 75px;
+  }
+  .header-search {
+    top: 60px;
+  }
+
+  .header-home__text {
+    line-height: 1.4;
+  }
+
+  .main-content {
+    padding-top: 60px;
+  }
+
+  .header {
+    height: 60px;
+  }
+
   .header-search-area {
     padding-left: 0;
   }
@@ -332,7 +485,8 @@
   }
 
   .header-home {
-    padding-top: 75px;
+    height: 100vh;
+    padding-top: 60px;
   }
 
   .header-support {
@@ -340,7 +494,7 @@
   }
 
   .nav-active {
-    width: 70px;
+    width: 65px;
     height: 60px;
     margin-right: 25px;
   }
@@ -362,12 +516,24 @@
 /* -------------------------- */
 
 @media (min-width: 1921px) {
-    .header-home::after {
-        background-size: cover;
-    }
-    .home-company::before {
-        background-size: cover;
-    }
+  .header-home::after {
+    background-size: cover;
+  }
+  .home-company::before {
+    background-size: cover;
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer-support-address {
+    white-space: nowrap;
+  }
+  .header-phone {
+    @include font-size(25px)
+  }
+  .header__back-call {
+    @include font-size(14px);
+  }
 }
 
 @media (min-width: 1360px) {
@@ -382,18 +548,60 @@
 }
 
 @media (min-width: 1200px) {
-    .vacancies-info__box {
-        line-height: 1.5;
-        padding: 30px 50px 50px;
+  .news-filter {
+    padding: 36px 50px;
+  }
+
+  .submenu {
+    padding-top: 27px;
+    position: absolute;
+    z-index: 10;
+    top: 100%;
+    pointer-events: none;
+    opacity: 0;
+    display: block !important;
+    transition: all 0.3s ease;
+  }
+
+  .menu-item-parent {
+    padding-right: 9px;
+    &:after {
+      width: 5px;
+      height: 5px;
+      border-bottom: 1px solid #000;
+      border-left: 1px solid #000;
+      display: block;
+      content: '';
+      transform: rotate(-45deg);
+      position: absolute;
+      right: -3px;
+      top: 7px;
+      transition: all 0.3s linear;
     }
-    
+    &:hover {
+      &::after {
+        top: 8px;
+        transform: rotate(135deg);
+      }
+      .submenu {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+  }
+
+  .nav-active-close, .nav-active {
+    display: none;
+  }
+
+  .vacancies-info__box {
+    line-height: 1.5;
+    padding: 30px 50px 50px;
+  }
+
   .header {
     padding-top: 18px;
     padding-bottom: 15px;
-  }
-
-  .nav-active {
-    display: none;
   }
 
   .menu-item__level-1:not(:last-child) {
@@ -410,25 +618,27 @@
   .news-section-half {
     margin-right: 385px;
   }
-  .footer-top {
-    margin-left: -20px;
-    margin-right: -20px;
+  .footer-top, .footer-bottom {
+    margin-left: -15px;
+    margin-right: -15px;
   }
   .footer-support {
     max-width: 300px;
   }
-  .footer-bottom {
-    margin-left: -20px;
-    margin-right: -20px;
-  }
 }
 
 @media (min-width: 992px) {
-    .vacancies-info__box {
-        max-width: calc(100% / 3);
-        flex-basis: calc(100% / 3);
-    }
-    
+  .services-list__item {
+    max-width: calc(100% / 3 - 20px);
+    flex-basis: calc(100% / 3 - 20px);
+    margin-bottom: 35px;
+  }
+
+  .vacancies-info__box {
+    max-width: calc(100% / 3);
+    flex-basis: calc(100% / 3);
+  }
+
   .home-company {
     padding-top: 70px;
     padding-bottom: 70px;
@@ -459,37 +669,62 @@
 }
 
 @media (min-width: 768px) {
-    .panel {
-        min-height: 100px;
-        @include font-size(18px);
-    }
-    
-  .news-filter {
-    margin-top: -57px;
+  .contacts-page__wrap {
+    width: 100%;
+    height: 695px;
+    display: flex;
   }
-  
-  .news-filter__item:not(:last-child) {
+  .contacts-page__map {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+
+  .contacts-page__info {
+    width: 380px;
+    padding: 30px 30px 15px;
+  }
+
+  //*****************************
+
+  .panel {
+    min-height: 100px;
+    @include font-size(18px);
+  }
+
+  .news-filter {
+    margin-top: -25px;
+    transform: translateY(-25%);
+  }
+  .news-list__item {
+    z-index: 15;
+    position: relative;
+  }
+
+  .news-filter__item:not(:first-child) {
     margin-right: 5px;
   }
-  
+
   .pagination {
     margin-top: -39px;
   }
-  
+
   .is-holder .header-page__wrap {
     text-align: center;
     h1 {
       text-transform: uppercase;
     }
   }
-  
+
   .header-page {
     @include font-size(20px);
     .container {
-        padding-bottom: 60px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+      padding-bottom: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
   }
 
@@ -527,14 +762,40 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1200px) {
-    .news-filter {
-        padding: 30px 30px 0;
-    }
-    .news-list__item {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
+@media (min-width: 568px) and (max-width: 991px) {
+  .services-list__item {
+    max-width: calc(100% / 2 - 15px);
+    flex-basis: calc(100% / 2 - 15px);
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .news-filter__item {
+    flex: 1;
+    text-align: center;
+  }
+  .news-filter__link {
+    padding-left: 5%;
+    padding-right: 5%;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .news-filter {
+    padding: 30px;
+  }
+  .news-list__item {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .services-list {
+    padding: 15px;
+  }
 }
 
 @media (min-width: 1200px) and (max-width: 1600px) {

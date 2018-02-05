@@ -1,12 +1,18 @@
 .header {
   width: 100%;
+  height: 75px;
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
   background-color: #fff;
+  position: fixed;
+  z-index: 90;
+  top: 0;
+  left: 0;
   flex: 0 0 auto;
   display: flex;
   align-items: center;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .1);
 }
 
 .logo {
@@ -21,6 +27,7 @@
 }
 
 .menu {
+  font-weight: 400;
   display: flex;
 }
 
@@ -37,13 +44,6 @@
 }
 
 .submenu {
-  opacity: 0;
-  padding-top: 27px;
-  position: absolute;
-  z-index: 10;
-  top: 100%;
-  pointer-events: none;
-  transition: all 0.3s ease;
   > li {
     padding: 15px 50px;
     background-color: #fff;
@@ -57,31 +57,7 @@
 }
 
 .menu-item-parent {
-  padding-right: 7px;
   position: relative;
-  &:after {
-    width: 5px;
-    height: 5px;
-    border-bottom: 1px solid #000;
-    border-left: 1px solid #000;
-    display: block;
-    content: '';
-    transform: rotate(-45deg);
-    position: absolute;
-    right: -3px;
-    top: 4px;
-    transition: all 0.3s linear;
-  }
-  &:hover {
-    &:after {
-      top: 6px;
-      transform: rotate(135deg);
-    }
-    .submenu {
-      opacity: 1;
-      pointer-events: auto;
-    }
-  }
 }
 
 .header-support {

@@ -30,9 +30,12 @@
     <header class="header">
     <div class="nav-active">
         <span>Открыть меню</span>
+            <svg class="cancel">
+                <use xlink:href="img/sprite.svg#cancel"></use>
+            </svg>
     </div>
     <div class="logo">
-        <a href="#">
+        <a href="index.html">
             <img src="img/logo-old.svg" alt="СКДО +">
         </a>
     </div>
@@ -47,11 +50,11 @@
                     </li>
                 </ul>
             </li>
-            <li class="menu-item__level-1"><a href="#" class="menu-item__link">О системе</a></li>
-            <li class="menu-item__level-1"><a href="#" class="menu-item__link">Услуги</a></li>
-            <li class="menu-item__level-1"><a href="#" class="menu-item__link">Вакансии</a></li>
-            <li class="menu-item__level-1"><a href="#" class="menu-item__link">Новости</a></li>
-            <li class="menu-item__level-1"><a href="#" class="menu-item__link">Контакты</a></li>
+            <li class="menu-item__level-1"><a href="page.html" class="menu-item__link">О системе</a></li>
+            <li class="menu-item__level-1"><a href="services.html" class="menu-item__link">Услуги</a></li>
+            <li class="menu-item__level-1"><a href="vacancies.html" class="menu-item__link">Вакансии</a></li>
+            <li class="menu-item__level-1"><a href="news.html" class="menu-item__link">Новости</a></li>
+            <li class="menu-item__level-1"><a href="contacts.html" class="menu-item__link">Контакты</a></li>
         </ul>
     </nav>
     <div class="header-support">
@@ -78,8 +81,6 @@
 </header>
 
 <div class="header-search container-fluid">
-    <div class="header-search-logo"><a href="#"><img src="img/logo-old.svg" alt="СКДО +"></a></div>
-
     <form action="#" class="header-search-area">
         <input type="search" class="header-search-field ui-placeholder" placeholder="Что вы хотите найти?">
         <button class="header-search-btn">
@@ -251,7 +252,7 @@
                 </div>
             </div>
 
-            <div class="contact-us">
+            <div class="contact-us" id="contact-us">
     <div class="contact-us-head">
         <h3 class="contact-us-title">Напишите нам</h3>
         <p class="contact-us-text">Если у вас возникли вопросы, укажите номер телефона и адрес
@@ -321,14 +322,16 @@
     <div class="container">
         <div class="footer-top">
             <ul class="footer-menu list-unstyled">
-                <li><a href="#" class="footer-link">О компании</a></li>
-                <li><a href="#" class="footer-link">О системе</a></li>
-                <li><a href="#" class="footer-link">Контакты</a></li>
+                <li><a href="page.html" class="footer-link">О компании</a></li>
+                <li><a href="page.html" class="footer-link">О системе</a></li>
+                <li><a href="contacts.html" class="footer-link">Контакты</a></li>
             </ul>
             <ul class="footer-links list-unstyled">
-                <li><a href="#" class="footer-link">О компании</a></li>
-                <li><a href="#" class="footer-link">О системе</a></li>
-                <li><a href="#" class="footer-link">Контакты</a></li>
+                <li><a href="services.html" class="footer-link">Дополнительные услуги</a></li>
+                <li><a href="#" class="footer-link">Аналитика</a></li>
+                <li><a href="vacancies.html" class="footer-link">Работа у нас</a></li>
+                <li><a href="news.html" class="footer-link">Новости</a></li>
+                <li><a href="smi.html" class="footer-link">Пресса о нас</a></li>
             </ul>
             <div class="footer-shared">
                 <ul class="social-list list-unstyled">
@@ -378,9 +381,9 @@
 
             <div class="footer-support">
                 <div class="footer-support-address">Москва, Космодамианская наб., 4/22, стр. 4</div>
-                <div class="footer-support-scheme"><a href="#">Схема проезда</a></div>
-                <div><a href="#" rel="nofollow" class="footer-support-email">info@skdo.ru</a></div>
-                <div class="footer-support-phone"><a href="#" rel="nofollow">8 800 700-79-97</a></div>
+                <div class="footer-support-scheme"><a href="contacts.html">Схема проезда</a></div>
+                <div><a href="mailto:info@skdo.ru" rel="nofollow" class="footer-support-email">info@skdo.ru</a></div>
+                <div class="footer-support-phone"><a href="tel:8800700799" rel="nofollow">8 800 700-79-97</a></div>
                 <button class="btn-red btn" data-toggle="modal" data-target="#back-call"><span>Обратный звонок</span></button>
             </div>
         </div>
@@ -392,6 +395,8 @@
         </div>
     </div>
 </footer>
+
+<div id="button-up"></div>
 
 </div>
 

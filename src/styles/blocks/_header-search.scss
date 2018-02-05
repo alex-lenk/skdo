@@ -2,7 +2,7 @@
   width: 100%;
   padding-top: 18px;
   padding-bottom: 18px;
-  top: 0;
+  top: 75px;
   left: 0;
   position: fixed;
   z-index: 20;
@@ -20,8 +20,7 @@
 }
 
 .header-search-area {
-  padding-left: 8%;
-  padding-right: 8%;
+  padding-right: 4%;
   margin: 0 auto;
   display: flex;
   align-items: flex-start;
@@ -47,14 +46,15 @@
   padding: 0;
   border: 0;
   background-color: transparent;
-  &:hover .magnifyings {
-    transform: scale(1.1);
-  }
   .magnifyings {
     width: 20px;
     height: 20px;
     fill: #2A2928;
     transition: all 0.3s ease;
+  }
+  &:hover .magnifyings {
+    fill: $hoverLinkColor;
+    transform: scale(1.1);
   }
   &.inactive {
     color: $grayColor;
@@ -65,14 +65,15 @@
   padding-top: 7px;
   cursor: pointer;
   align-self: flex-start;
-  &:hover .cancel {
-    transform: scale(1.1);
-  }
   .cancel {
     width: 18px;
     height: 18px;
     fill: $grayColor;
     transition: all 0.3s ease;
+  }
+  &:hover .cancel {
+    fill: $hoverLinkColor;
+    transform: scale(1.1);
   }
 }
 

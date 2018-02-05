@@ -3,8 +3,12 @@
   position: relative;
   z-index: 12;
   display: flex;
-  margin-left: -20px;
-  margin-right: -20px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.contacts-wrap {
+  background-color: transparent;
 }
 
 .contact-us-head {
@@ -34,5 +38,6 @@
     width: 100%;
     padding-top: 22px;
     padding-bottom: 22px;
+    @include font-size(20px);
   }
 }

@@ -26,10 +26,8 @@
   }
 }
 
-.footer-links {
-  li:not(:last-child) {
-    margin-bottom: 30px;
-  }
+.footer-links li:not(:last-child) {
+    margin-bottom: 15px;
 }
 
 .footer-shared {
@@ -67,6 +65,7 @@
 
 .footer-subscription-title {
   margin-bottom: 10px;
+  font-weight: 400;
 }
 
 .footer-subscription-send {
@@ -116,6 +115,7 @@
 
 .footer-support-phone {
   margin-bottom: 17px;
+  font-weight: 400;
   a:not(:hover) {
     color: $mainColor;
   }
@@ -127,7 +127,7 @@
   border-top: 1px solid #c9c9c9;
   display: flex;
   align-items: center;
-  @include font-size(13px);
+  @include font-size(14px);
   a:not(:hover) {
     color: $mainColor;
   }

@@ -19,8 +19,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel="manifest" href="img/favicon/manifest.json">
-    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#4a4643">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#ffffff">
     <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="SKDO +">
+    <meta name="application-name" content="SKDO +">
     <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 </head>
@@ -30,9 +32,12 @@
     <header class="header">
     <div class="nav-active">
         <span>Открыть меню</span>
+            <svg class="cancel">
+                <use xlink:href="img/sprite.svg#cancel"></use>
+            </svg>
     </div>
     <div class="logo">
-        <a href="#">
+        <a href="index.html">
             <img src="img/logo-old.svg" alt="СКДО +">
         </a>
     </div>
@@ -47,11 +52,11 @@
                     </li>
                 </ul>
             </li>
-            <li class="menu-item__level-1"><a href="#" class="menu-item__link">О системе</a></li>
-            <li class="menu-item__level-1"><a href="#" class="menu-item__link">Услуги</a></li>
-            <li class="menu-item__level-1"><a href="#" class="menu-item__link">Вакансии</a></li>
-            <li class="menu-item__level-1"><a href="#" class="menu-item__link">Новости</a></li>
-            <li class="menu-item__level-1"><a href="#" class="menu-item__link">Контакты</a></li>
+            <li class="menu-item__level-1"><a href="page.html" class="menu-item__link">О системе</a></li>
+            <li class="menu-item__level-1"><a href="services.html" class="menu-item__link">Услуги</a></li>
+            <li class="menu-item__level-1"><a href="vacancies.html" class="menu-item__link">Вакансии</a></li>
+            <li class="menu-item__level-1"><a href="news.html" class="menu-item__link">Новости</a></li>
+            <li class="menu-item__level-1"><a href="contacts.html" class="menu-item__link">Контакты</a></li>
         </ul>
     </nav>
     <div class="header-support">
@@ -78,8 +83,6 @@
 </header>
 
 <div class="header-search container-fluid">
-    <div class="header-search-logo"><a href="#"><img src="img/logo-old.svg" alt="СКДО +"></a></div>
-
     <form action="#" class="header-search-area">
         <input type="search" class="header-search-field ui-placeholder" placeholder="Что вы хотите найти?">
         <button class="header-search-btn">
@@ -112,12 +115,16 @@
         </section>
 
         <div class="container">
-            <ul class="news-filter row">
-                <li class="news-filter__item news-filter__active"><a href="#" class="news-filter__text">Новости
-                    компании</a></li>
-                <li class="news-filter__item"><a href="#" class="news-filter__text">Строительная отрасль</a></li>
-                <li class="news-filter__item"><a href="#" class="news-filter__text">Саморегулирование</a></li>
-                <li class="news-filter__item"><a href="#" class="news-filter__text">Госзакупки</a></li>
+            <ul class="news-filter">
+                <li class="news-filter__item">
+                    <a href="#" class="news-filter__link">Новости компании</a>
+                </li>
+                <li class="news-filter__item news-filter__active"><a href="#" class="news-filter__link">Строительная отрасль</a></li>
+                <li class="news-filter__item"><a href="#" class="news-filter__link">Саморегулирование</a></li>
+                <li class="news-filter__item"><a href="#" class="news-filter__link">Госзакупки</a></li>
+                <li class="news-filter__item news-filter__active">
+                    <a href="#" class="news-filter__link">Все новости</a>
+                </li>
             </ul>
 
             <ul class="news-list row">
@@ -221,14 +228,16 @@
     <div class="container">
         <div class="footer-top">
             <ul class="footer-menu list-unstyled">
-                <li><a href="#" class="footer-link">О компании</a></li>
-                <li><a href="#" class="footer-link">О системе</a></li>
-                <li><a href="#" class="footer-link">Контакты</a></li>
+                <li><a href="page.html" class="footer-link">О компании</a></li>
+                <li><a href="page.html" class="footer-link">О системе</a></li>
+                <li><a href="contacts.html" class="footer-link">Контакты</a></li>
             </ul>
             <ul class="footer-links list-unstyled">
-                <li><a href="#" class="footer-link">О компании</a></li>
-                <li><a href="#" class="footer-link">О системе</a></li>
-                <li><a href="#" class="footer-link">Контакты</a></li>
+                <li><a href="services.html" class="footer-link">Дополнительные услуги</a></li>
+                <li><a href="#" class="footer-link">Аналитика</a></li>
+                <li><a href="vacancies.html" class="footer-link">Работа у нас</a></li>
+                <li><a href="news.html" class="footer-link">Новости</a></li>
+                <li><a href="smi.html" class="footer-link">Пресса о нас</a></li>
             </ul>
             <div class="footer-shared">
                 <ul class="social-list list-unstyled">
@@ -278,9 +287,9 @@
 
             <div class="footer-support">
                 <div class="footer-support-address">Москва, Космодамианская наб., 4/22, стр. 4</div>
-                <div class="footer-support-scheme"><a href="#">Схема проезда</a></div>
-                <div><a href="#" rel="nofollow" class="footer-support-email">info@skdo.ru</a></div>
-                <div class="footer-support-phone"><a href="#" rel="nofollow">8 800 700-79-97</a></div>
+                <div class="footer-support-scheme"><a href="contacts.html">Схема проезда</a></div>
+                <div><a href="mailto:info@skdo.ru" rel="nofollow" class="footer-support-email">info@skdo.ru</a></div>
+                <div class="footer-support-phone"><a href="tel:8800700799" rel="nofollow">8 800 700-79-97</a></div>
                 <button class="btn-red btn" data-toggle="modal" data-target="#back-call"><span>Обратный звонок</span></button>
             </div>
         </div>
@@ -292,6 +301,8 @@
         </div>
     </div>
 </footer>
+
+<div id="button-up"></div>
 
 </div>
 

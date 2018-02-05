@@ -70,28 +70,64 @@ $(document).ready(function () {
 
     $('.nav-active').click(
         function () {
+            $(this).toggleClass('nav-active__open');
             headerNav.toggleClass('header-nav__open');
         }
     );
 
-    $('.portfolio').isotope({
-        itemSelector: '.portfolio li'
+
+    //навигация - плавный скроллинг к якорю
+    $(".to_contact-us").on("click", function (event) {
+        event.preventDefault();
+
+        //забираем идентификатор бока с атрибута href
+        var id = $(this).attr('href'),
+
+            //узнаем высоту от начала страницы до блока на который ссылается якорь
+            top = $(id).offset().top;
+
+        //анимируем переход на расстояние - top за 1500 мс
+        $('body,html').animate({scrollTop: top}, 1500);
     });
 
-    $('#filter a').click(function(){
-        $('#filter a').removeClass('current');
-        $(this).addClass('current');
-        var selector = $(this).attr('data-filter');
+    //END
 
-        $('.portfolio').isotope({
-            filter: selector,
-            animationOptions: {
-                duration: 1000,
-                easing: 'easeOutQuart',
-                queue: false
-            }
-        });
+    /**
+     * При прокрутке страницы, показываем или срываем кнопку
+     */
+    $(window).scroll(function () {
+        // Если отступ сверху больше 50px то показываем кнопку "Наверх"
+        if ($(this).scrollTop() > 1000) {
+            $('#button-up').fadeIn();
+        } else {
+            $('#button-up').fadeOut();
+        }
+    });
+
+    /** При нажатии на кнопку мы перемещаемся к началу страницы */
+    $('#button-up').click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 500);
         return false;
+    });
+
+    // END
+
+
+    $('.submenu').css("display", "none");
+
+
+    var menuItemParent = $('.menu-item-parent');
+
+    menuItemParent.append('<span class="menu-item-decor"></span>');
+
+
+    $(function () {
+        $('.menu-item-decor').click(function () {
+            $(this).parent().toggleClass('opened-submenu');
+            $(this).parent().children('.submenu').toggle("slow");
+        });
     });
 });
 

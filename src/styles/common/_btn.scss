@@ -13,7 +13,7 @@
   position: relative;
   transition: all 0.3s linear;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-  
+
   &::before {
     content: '';
     position: absolute;
@@ -26,12 +26,12 @@
     transition: all 0.6s;
     transform: translateX(-50%) translateY(-50%) rotate(45deg);
   }
-  
+
   span {
     position: relative;
     z-index: 4;
   }
-  
+
   &-light {
     height: 42px;
     padding-left: 20px;
@@ -44,7 +44,7 @@
     align-items: center;
     justify-content: center;
     @include font-size(16px);
-  
+
     &::before {
       background: #fff;
     }
@@ -65,7 +65,7 @@
     color: #fff;
     background-color: $redColor;
     @include font-size(14px);
-  
+
     &::before {
       background: #c1251e;
     }
@@ -86,6 +86,7 @@
     background-color: $linkColor;
     border: 2px solid $linkColor;
     cursor: pointer;
+    text-transform: uppercase;
     transition: all 0.3s linear;
     @include font-size(18px);
     &::before {
@@ -99,42 +100,54 @@
       }
     }
   }
-    
-    &-link {
-        height: 42px;
-        margin: 0 auto;
-        padding-left: 20px;
-        padding-right: 20px;
-        line-height: 42px;
-        color: $hoverLinkColor;
-        border: 2px solid $hoverLinkColor;
-        font-weight: normal;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        @include font-size(18px);
-    
-        &::before {
-            background: $hoverLinkColor;
-        }
-        &:hover {
-            color: #fff;
-            &::before {
-                height: 250px;
-                opacity: 1;
-            }
-            &::after {
-                color: #fff;
-            }
-        }
+
+  &-link {
+    height: 42px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 42px;
+    color: $hoverLinkColor;
+    border: 2px solid $hoverLinkColor;
+    font-weight: normal;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    @include font-size(18px);
+
+    &::before {
+      background: $hoverLinkColor;
     }
+    &:hover {
+      color: #fff;
+      &::before {
+        height: 250px;
+        opacity: 1;
+      }
+      &::after {
+        color: #fff;
+      }
+    }
+  }
 }
 
 .show-more::after {
-        margin-left: 15px;
-        display: inline-block;
-        position: relative;
-        z-index: 2;
-        content: '+';
-        transition: color 0.3s linear;
+  margin-left: 15px;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  content: '+';
+  transition: color 0.3s linear;
+}
+
+.btn-pdf, .btn-doc, .btn-xls {
+}
+
+.btn-pdf {
+}
+
+.btn-doc {
+}
+
+.btn-xls {
 }

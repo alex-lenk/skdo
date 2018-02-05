@@ -8,6 +8,6 @@
 
 //= lib/bootstrap.min.js
 
-//= ../../bower_components/isotope-layout/dist/isotope.pkgd.min.js
+// = ../../bower_components/isotope-layout/dist/isotope.pkgd.min.js
 
 // = lib/jquery.fancybox.min.js
