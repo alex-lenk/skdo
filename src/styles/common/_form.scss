@@ -4,9 +4,10 @@
 .ui-placeholder {
   @include hidePlaceholder {
     opacity: 1;
-    font-size: 14px;
     color: $mainColor;
+    font-style: oblique;
     transition: opacity 0.3s ease;
+    @include font-size(14px);
   }
   &:focus {
     @include hidePlaceholder {
@@ -92,11 +93,21 @@
   }
 }
 
-.ajax_form .error {
-    margin-top: 10px;
+form.ajax_form {
+  .error {
+    color: $redColor;
+  }
+  span.error {
+    width: 100%;
     line-height: 1.2;
-    font-size: 0.875rem;
-    display: inline-block;
-    color: $redColor !important;
+    position: absolute;
+    top: 107%;
     @include font-size(14px);
+    & ~ .mail {
+        fill: #d12e27;
+    }
+  }
+  input.error {
+    border: 1px solid;
+  }
 }

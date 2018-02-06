@@ -239,3 +239,37 @@
     }
   }
 }
+
+//***************************
+
+#jGrowl {
+  font-size: 18px;
+  margin: 0 12px 0;
+}
+
+.jGrowl.top-right {
+  width: 30% !important;
+  left: 35% !important;
+  top: 35% !important;
+}
+
+#jGrowl .jGrowl-notification {
+  position: relative;
+  width: 320px;
+  padding: 15px;
+  text-align: center;
+  background: none repeat 0 0 #fff !important;
+  box-shadow: 0 0 0 7px #7ab6e4 !important;
+  border: 0 solid rgba(255, 255, 255, 0.49) !important;
+}
+
+#jGrowl .jGrowl-notification .jGrowl-close {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  color: #7ab6e4 !important;
+}
+
+#jGrowl .jGrowl-notification .jGrowl-message {
+  color: #7ab6e4 !important;
+}
