@@ -17,9 +17,14 @@
 
 .logo {
   width: 120px;
+  height: 100%;
+  padding: 7px 0 5px;
   margin-right: 6%;
   flex: none;
   @include clearfix;
+  img {
+    max-height: 100%;
+  }
 }
 
 .header-nav {
