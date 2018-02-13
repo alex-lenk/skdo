@@ -5,15 +5,19 @@
   position: relative;
   z-index: 5;
   color: #fff;
+  background-image: url(../img/bg-about.jpg);
+  background-repeat: no-repeat;
+  background-size: 0;
   &::before {
     top: -80px;
     left: 0;
     width: 100%;
     height: calc(100% + 160px);
-    background: url(../img/bg-about.jpg) no-repeat;
     position: absolute;
     content: '';
     z-index: -1;
+    background-image: inherit;
+    background-repeat: inherit;
   }
   .container {
     background-color: transparent;
