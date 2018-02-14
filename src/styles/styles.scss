@@ -122,9 +122,6 @@
 
 .header-page__wrap {
   margin: auto 0;
-  h1 {
-    text-transform: uppercase;
-  }
 }
 
 .article-content {
@@ -286,6 +283,7 @@
 }
 
 .system-block__item {
+  margin-bottom: 30px;
 }
 
 .system-block__front {
@@ -307,11 +305,34 @@
 }
 
 .system-block__back {
+  border: 5px solid;
+  background: #fff;
   transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
 }
 
 .system-block__img {
   opacity: 0;
+}
+
+.system-block .system-block__more {
+  padding: 17px 0 15px;
+  text-align: center;
+  display: block;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+  &:hover {
+    color: #fff;
+  }
+}
+
+.system-block .system-block__list {
+  padding: 15px 35px;
+  margin-bottom: auto;
+  margin-top: auto;
 }
 
 /* entire container, keeps perspective */

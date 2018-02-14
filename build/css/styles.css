@@ -1851,8 +1851,6 @@ form.ajax_form input.error {
 
 .header-page__wrap {
   margin: auto 0; }
-  .header-page__wrap h1 {
-    text-transform: uppercase; }
 
 .article-content {
   margin: -60px -20px 60px;
@@ -1983,6 +1981,9 @@ form.ajax_form input.error {
 #jGrowl .jGrowl-notification .jGrowl-message {
   color: #7ab6e4 !important; }
 
+.system-block__item {
+  margin-bottom: 30px; }
+
 .system-block__front {
   background-repeat: no-repeat;
   background-size: contain;
@@ -2009,11 +2010,36 @@ form.ajax_form input.error {
     margin: 0 5px; }
 
 .system-block__back {
+  border: 5px solid;
+  background: #fff;
   -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg); }
+          transform: rotateY(180deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
 
 .system-block__img {
   opacity: 0; }
+
+.system-block .system-block__more {
+  padding: 17px 0 15px;
+  text-align: center;
+  display: block;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1; }
+  .system-block .system-block__more:hover {
+    color: #fff; }
+
+.system-block .system-block__list {
+  padding: 15px 35px;
+  margin-bottom: auto;
+  margin-top: auto; }
 
 /* entire container, keeps perspective */
 .flip-container {
