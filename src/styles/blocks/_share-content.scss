@@ -1,0 +1,24 @@
+.share-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.share-content hr {
+  margin: 1em 0 2em;
+  width: 100%;
+  border: 1px solid #7ab6e4;
+}
+
+.share-content__text {
+  font-weight: 400;
+}
+
+.share-content .ya-share2__list,
+.share-content .ya-share2__list li:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.share-content .ya-share2__list li::before {
+  display: none;
+}

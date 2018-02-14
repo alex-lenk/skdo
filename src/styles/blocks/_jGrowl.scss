@@ -1,0 +1,34 @@
+#jGrowl {
+  font-size: 18px;
+  margin: 0;
+  &.top-right {
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%);
+    min-width: 300px;
+  }
+}
+
+#jGrowl .jGrowl-notification {
+  margin: 0;
+  border-radius: 0;
+  position: relative;
+  max-width: 320px;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  background: none repeat 0 0 #fff !important;
+  box-shadow: 0 0 0 1px #7ab6e4, 0 0 5px 1px rgba(0, 0, 0, .3);
+  border: 0 solid rgba(255, 255, 255, .6);
+}
+
+#jGrowl .jGrowl-notification .jGrowl-close {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  color: #7ab6e4 !important;
+}
+
+#jGrowl .jGrowl-notification .jGrowl-message {
+  color: #7ab6e4 !important;
+}
