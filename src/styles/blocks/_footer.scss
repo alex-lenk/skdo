@@ -2,6 +2,8 @@
   padding-top: 65px;
   flex: 0 0 auto;
   background-color: #fff;
+  position: relative;
+  z-index: 10;
 }
 
 .footer-top {
@@ -38,7 +40,7 @@
 .footer-subscription {
   .ui-label {
     top: 17px;
-    left: 49px;
+    left: 40px;
     font-style: italic;
     @include font-size(14px)
   }
@@ -56,7 +58,7 @@
     width: 19px;
     height: 19px;
     top: 16px;
-    left: 14px;
+    left: 10px;
     position: absolute;
     fill: #d8d8d8;
     pointer-events: none;
@@ -70,7 +72,7 @@
 
 .footer-subscription-send {
   padding: 0;
-  width: 45px;
+  width: 35px;
   height: 100%;
   border: 0;
   position: absolute;
@@ -82,7 +84,7 @@
     width: 13px;
     height: 13px;
     top: 20px;
-    right: 20px;
+    right: 11px;
     fill: #959493;
     position: absolute;
     transition: fill 0.3s ease;

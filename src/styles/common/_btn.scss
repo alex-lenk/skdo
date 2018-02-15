@@ -14,6 +14,10 @@
   transition: all 0.3s linear;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 
+  svg {
+    transition: all 0.3s linear;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -131,8 +135,35 @@
   }
 
   &-pdf {
-    width: 275px;
-    height: 60px;
+    height: 63px;
+    padding-left: 26px;
+    padding-right: 31px;
+    border: 2px solid #7ab6e4;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    @include font-size(18px);
+    .file-pdf {
+      width: 44px;
+      height: 44px;
+      margin-right: 17px;
+      fill: #7ab6e4;
+      z-index: 5;
+    }
+    &::before {
+      background-color: #7ab6e4;
+    }
+    &:hover {
+      color: #fff;
+      &::before {
+        height: 250px;
+        opacity: 1;
+      }
+      .file-pdf {
+        fill: #fff;
+      }
+    }
   }
 }
 

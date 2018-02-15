@@ -200,24 +200,25 @@ p {
   list-style: none;
 }
 
-.article-content ol li {
-  position: relative;
-  padding-left: 35px;
+.article-content ol li li {
+  padding-left: 40px;
+  @include clearfix;
   &:not(:last-child) {
     margin-bottom: 14px;
   }
 }
 
 .article-content ol li:before {
-  content: counter(li);
   counter-increment: li;
-  position: absolute;
-  top: 2px;
-  left: 0;
-  width: 24px;
-  height: 24px;
+  content: counters(li,".") ". ";
+  margin-right: 10px;
+  float: left;
+  padding: 0 3px;
+  min-width: 24px;
+  height: 25px;
   color: #fff;
   background: $hoverLinkColor;
+  line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;

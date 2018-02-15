@@ -1,11 +1,25 @@
 .home-content {
+  padding-bottom: 1px;
+  background-color: #f0f0ef;
   position: relative;
   z-index: 10;
+  &::before {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    top: -100px;
+    display: block;
+    content: '';
+  }
   .container {
     background-color: #fff;
     position: relative;
     z-index: 10;
   }
+}
+
+.home-content__first {
+  margin-top: -200px;
 }
 
 .home-content-h3 {
