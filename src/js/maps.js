@@ -268,8 +268,8 @@ $(function () {
         }, {
             iconLayout: "default#image",
             iconImageHref: "templates/img/map-marker.png",
-            iconImageSize: [201, 70],
-            iconImageOffset: [-175, -68]
+            iconImageSize: [60, 70],
+            iconImageOffset: [-30, -80]
         });
             e.geoObjects.add(myPlacemark);
             e.controls.add('zoomControl');
