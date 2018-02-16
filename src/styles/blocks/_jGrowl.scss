@@ -1,6 +1,11 @@
+.jGrowl-notification {
+  display: none !important;
+}
+
 #jGrowl {
   font-size: 18px;
   margin: 0;
+  display: none !important;
   &.top-right {
     left: 50% !important;
     top: 50% !important;
