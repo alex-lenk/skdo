@@ -256,7 +256,7 @@ $(function () {
     var e = !1;
     ymaps.ready(function () {
         var e = new ymaps.Map("map", {
-            center: [55.744156, 37.639141],
+            center: [55.738465, 37.639824],
             zoom: 18,
             controls: [],
             scroll: false

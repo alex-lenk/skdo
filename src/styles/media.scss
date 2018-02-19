@@ -35,6 +35,39 @@
 }
 
 @media (max-width: 1199px) {
+  .header-nav {
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aside-support {
+    padding-bottom: 80px;
+    margin-top: auto;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aside-support__logo {
+    margin-bottom: 5px;
+    max-width: 40px;
+  }
+
+  .aside-support__email {
+  }
+
+  .aside-support__phone {
+    color: inherit;
+    font-weight: 400;
+    @include font-size(20px)
+  }
+
+  .aside-support__call {
+    margin-top: 10px;
+  }
+
   .menu-item-decor {
     width: 40px;
     height: 20px;
@@ -348,7 +381,7 @@
   }
 
   .header-home__title {
-    @include font-size(30px);
+    @include font-size(28px);
   }
 
   .app-connect .ui-field:focus {
@@ -445,6 +478,11 @@
 }
 
 @media (max-width: 567px) {
+  .header-home::before,
+  .header-home::after {
+    top: 60px;
+  }
+
   .article-content {
     margin-left: -15px;
     margin-right: -15px;
@@ -468,6 +506,13 @@
     line-height: 1.4;
   }
 
+  .home-content::before {
+    display: none;
+  }
+  .home-content__first {
+    margin-top: 0;
+  }
+
   .main-content {
     padding-top: 60px;
   }
@@ -485,8 +530,9 @@
   }
 
   .header-home {
+    margin-top: -60px;
     height: 100vh;
-    padding-top: 60px;
+    padding-top: 90px;
   }
 
   .header-support {
@@ -548,6 +594,10 @@
 }
 
 @media (min-width: 1200px) {
+  .aside-support {
+    display: none;
+  }
+
   .news-filter {
     padding: 36px 50px;
   }
@@ -690,8 +740,7 @@
   }
 
   .news-filter {
-    margin-top: -25px;
-    transform: translateY(-25%);
+    margin-bottom: 25px;
   }
   .news-list__item {
     z-index: 15;
