@@ -64,7 +64,6 @@
   &-red {
     padding: 10px 20px;
     font-weight: bold;
-    text-transform: uppercase;
     line-height: 1;
     color: #fff;
     background-color: $redColor;
@@ -90,7 +89,6 @@
     background-color: $linkColor;
     border: 2px solid $linkColor;
     cursor: pointer;
-    text-transform: uppercase;
     transition: all 0.3s linear;
     @include font-size(18px);
     &::before {

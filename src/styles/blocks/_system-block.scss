@@ -1,5 +1,6 @@
 .system-block__item {
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .system-block__front {
@@ -85,4 +86,33 @@
 .system-block__back {
   backface-visibility: hidden;
 
+}
+
+.system-block__content {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .read-more {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  &:hover .read-more {
+    opacity: 1;
+  }
+}
+
+.system-block__title {
+  padding: 0 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  @include font-size(32px)
 }

@@ -258,6 +258,37 @@ body {
       -ms-flex-direction: column;
           flex-direction: column; }
 
+.read-more {
+  color: #4b4644;
+  font-weight: 400;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.9375rem; }
+  .read-more .arrow-circle {
+    margin-right: 15px; }
+  .read-more:hover .arrow {
+    -webkit-transform: translateX(2px);
+            transform: translateX(2px); }
+
+.box-truncate {
+  max-height: 180px;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  position: relative; }
+  .box-truncate::before {
+    width: 100%;
+    height: 40px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    content: '';
+    background: linear-gradient(rgba(255, 255, 255, 0), #7ab6e4); }
+
 .btn {
   padding: 0;
   border: 0;
@@ -315,7 +346,6 @@ body {
   .btn-red {
     padding: 10px 20px;
     font-weight: bold;
-    text-transform: uppercase;
     line-height: 1;
     color: #fff;
     background-color: #d12e27;
@@ -335,7 +365,6 @@ body {
     background-color: #7ab6e4;
     border: 2px solid #7ab6e4;
     cursor: pointer;
-    text-transform: uppercase;
     transition: all 0.3s linear;
     font-size: 1.125rem; }
     .btn-blue::before {
@@ -831,7 +860,6 @@ form.ajax_form input.error {
 .header-home__title {
   margin-bottom: 23px;
   color: inherit;
-  text-transform: uppercase;
   font-weight: normal;
   font-size: 3.75rem; }
 
@@ -870,7 +898,6 @@ form.ajax_form input.error {
   margin-bottom: 15px;
   line-height: 1.1;
   color: #fff;
-  text-transform: uppercase;
   font-size: 2.25rem; }
 
 .home-integrations {
@@ -1066,7 +1093,6 @@ form.ajax_form input.error {
 .home-company__title {
   margin-bottom: 40px;
   color: white;
-  text-transform: uppercase;
   font-weight: normal;
   font-size: 2.1875rem; }
 
@@ -1865,7 +1891,8 @@ form.ajax_form input.error {
   background-color: #fff; }
 
 .system-block__item {
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  text-align: center; }
 
 .system-block__front {
   background-repeat: no-repeat;
@@ -1957,6 +1984,40 @@ form.ajax_form input.error {
 .system-block__back {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden; }
+
+.system-block__content {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .system-block__content .read-more {
+    opacity: 0;
+    transition: opacity 0.4s ease; }
+  .system-block__content:hover .read-more {
+    opacity: 1; }
+
+.system-block__title {
+  padding: 0 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  font-size: 2rem; }
 
 .jGrowl-notification {
   display: none !important; }
@@ -2051,37 +2112,6 @@ form.ajax_form input.error {
       -ms-flex: 1 0 auto;
           flex: 1 0 auto; }
 
-.read-more {
-  color: #4b4644;
-  font-weight: 400;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 0.9375rem; }
-  .read-more .arrow-circle {
-    margin-right: 15px; }
-  .read-more:hover .arrow {
-    -webkit-transform: translateX(2px);
-            transform: translateX(2px); }
-
-.box-truncate {
-  max-height: 180px;
-  height: 100%;
-  display: block;
-  overflow: hidden;
-  position: relative; }
-  .box-truncate::before {
-    width: 100%;
-    height: 40px;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    content: '';
-    background: linear-gradient(rgba(255, 255, 255, 0), #7ab6e4); }
-
 .header-page {
   height: 512px;
   color: #fff;
@@ -2136,7 +2166,7 @@ form.ajax_form input.error {
   padding-bottom: 60px; }
 
 .article-content {
-  margin: 0 -20px;
+  margin: 0 -15px;
   padding: 50px;
   background-color: #fff;
   position: relative;

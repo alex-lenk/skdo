@@ -210,7 +210,7 @@ p {
 
 .article-content ol li:before {
   counter-increment: li;
-  content: counters(li,".") ". ";
+  content: counters(li, ".") ". ";
   margin-right: 10px;
   float: left;
   padding: 0 3px;
@@ -266,4 +266,35 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+}
+
+.read-more {
+  color: $mainColor;
+  font-weight: 400;
+  display: inline-flex;
+  align-items: center;
+  @include font-size(15px);
+  .arrow-circle {
+    margin-right: 15px;
+  }
+  &:hover .arrow {
+    transform: translateX(2px);
+  }
+}
+
+.box-truncate {
+  max-height: 180px;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  &::before {
+    width: 100%;
+    height: 40px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    content: '';
+    background: linear-gradient(rgba(255, 255, 255, 0), #7ab6e4);
+  }
 }
