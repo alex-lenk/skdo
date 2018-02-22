@@ -61,16 +61,16 @@
     }
   }
 
-  &-red {
+  &-black {
     padding: 10px 20px;
     font-weight: bold;
     line-height: 1;
-    color: #fff;
-    background-color: $redColor;
+    color: $mainColor;
+    border: 2px solid $mainColor;
     @include font-size(14px);
 
     &::before {
-      background: #c1251e;
+      background: $mainColor;
     }
     &:hover {
       color: #fff;

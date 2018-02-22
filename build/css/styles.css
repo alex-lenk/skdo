@@ -343,18 +343,18 @@ body {
       .btn-light:hover::before {
         height: 250px;
         opacity: 1; }
-  .btn-red {
+  .btn-black {
     padding: 10px 20px;
     font-weight: bold;
     line-height: 1;
-    color: #fff;
-    background-color: #d12e27;
+    color: #4b4644;
+    border: 2px solid #4b4644;
     font-size: 0.875rem; }
-    .btn-red::before {
-      background: #c1251e; }
-    .btn-red:hover {
+    .btn-black::before {
+      background: #4b4644; }
+    .btn-black:hover {
       color: #fff; }
-      .btn-red:hover::before {
+      .btn-black:hover::before {
         height: 250px;
         opacity: 1; }
   .btn-blue {
@@ -1893,6 +1893,8 @@ form.ajax_form input.error {
 .system-block__item {
   margin-bottom: 30px;
   text-align: center; }
+  .system-block__item img {
+    box-shadow: 0 6px 20.16px 0.84px rgba(64, 70, 91, 0.43); }
 
 .system-block__front {
   background-repeat: no-repeat;
@@ -2019,6 +2021,14 @@ form.ajax_form input.error {
   text-align: center;
   font-size: 2rem; }
 
+.system-block__auto {
+  padding-left: 15px;
+  padding-top: 15px;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: left;
+  position: relative; }
+
 .jGrowl-notification {
   display: none !important; }
 
@@ -2121,7 +2131,11 @@ form.ajax_form input.error {
   background-image: url(../img/example/bg-news.jpg);
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: cover; }
+  background-size: 0;
+  /*  &::before {
+    background-color: rgba(#000, .4);
+    z-index: 4;
+  }*/ }
   .header-page::before, .header-page::after {
     width: 100%;
     height: inherit;
@@ -2129,14 +2143,12 @@ form.ajax_form input.error {
     left: 0;
     position: fixed;
     content: ''; }
-  .header-page::before {
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: 4; }
   .header-page::after {
     z-index: 3;
     background-image: inherit;
     background-repeat: inherit;
-    background-position: inherit; }
+    background-position: inherit;
+    background-size: cover; }
   .header-page .container {
     min-height: 512px;
     position: relative;

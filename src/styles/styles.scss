@@ -73,7 +73,7 @@
   background-image: url(../img/example/bg-news.jpg);
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: cover;
+  background-size: 0;
   &::before,
   &::after {
     width: 100%;
@@ -83,15 +83,16 @@
     position: fixed;
     content: '';
   }
-  &::before {
+/*  &::before {
     background-color: rgba(#000, .4);
     z-index: 4;
-  }
+  }*/
   &::after {
     z-index: 3;
     background-image: inherit;
     background-repeat: inherit;
     background-position: inherit;
+    background-size: cover;
   }
   .container {
     min-height: 512px;

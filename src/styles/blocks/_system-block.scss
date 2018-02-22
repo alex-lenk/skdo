@@ -1,6 +1,9 @@
 .system-block__item {
   margin-bottom: 30px;
   text-align: center;
+  img {
+      box-shadow: 0 6px 20.16px 0.84px rgba(64, 70, 91, 0.43);
+  }
 }
 
 .system-block__front {
@@ -115,4 +118,13 @@
   color: #fff;
   text-align: center;
   @include font-size(32px)
+}
+
+.system-block__auto {
+  padding-left: 15px;
+  padding-top: 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: left;
+  position: relative;
 }
