@@ -2133,9 +2133,9 @@ form.ajax_form input.error {
   background-position: top center;
   background-size: 0;
   /*  &::before {
-    background-color: rgba(#000, .4);
-    z-index: 4;
-  }*/ }
+      background-color: rgba(#000, .4);
+      z-index: 4;
+    }*/ }
   .header-page::before, .header-page::after {
     width: 100%;
     height: inherit;
@@ -2217,3 +2217,33 @@ form.ajax_form input.error {
     padding: 15px; }
     .article-content .partners-list li::before {
       display: none; }
+
+/* these styles are for the demo, but are not required for the plugin */
+.zoom {
+  display: inline-block;
+  position: relative; }
+
+/* magnifying glass icon */
+.zoom {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  cursor: zoom-in; }
+  .zoom:hover {
+    cursor: zoom-out; }
+  .zoom::after {
+    content: '';
+    display: block;
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(../img/icon.png) no-repeat; }
+
+.zoom img {
+  display: block; }
+
+.zoom img::-moz-selection {
+  background-color: transparent; }
+
+.zoom img::selection {
+  background-color: transparent; }

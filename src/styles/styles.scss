@@ -83,10 +83,10 @@
     position: fixed;
     content: '';
   }
-/*  &::before {
-    background-color: rgba(#000, .4);
-    z-index: 4;
-  }*/
+  /*  &::before {
+      background-color: rgba(#000, .4);
+      z-index: 4;
+    }*/
   &::after {
     z-index: 3;
     background-image: inherit;
@@ -171,4 +171,37 @@
       display: none;
     }
   }
+}
+
+/* these styles are for the demo, but are not required for the plugin */
+.zoom {
+  display: inline-block;
+  position: relative;
+}
+
+/* magnifying glass icon */
+.zoom {
+  box-shadow: 0 0 5px rgba(#000, .3);
+  cursor: zoom-in;
+  &:hover {
+    cursor: zoom-out;
+  }
+  &::after {
+    content: '';
+    display: block;
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(../img/icon.png) no-repeat;
+  }
+}
+
+.zoom img {
+  display: block;
+}
+
+.zoom img::selection {
+  background-color: transparent;
 }

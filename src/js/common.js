@@ -129,5 +129,7 @@ $(document).ready(function () {
             $(this).parent().children('.submenu').toggle("slow");
         });
     });
+
+    $('#ex1').zoom();
 });
 
