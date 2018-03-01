@@ -131,5 +131,15 @@ $(document).ready(function () {
     });
 
     $('#ex1').zoom();
+
+    var swiper = new Swiper('.news-slider', {
+        autoplay: {
+            delay: 7000
+        },
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        }
+    });
 });
 

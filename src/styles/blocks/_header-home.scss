@@ -1,10 +1,11 @@
 .header-home {
-  height: 790px;
-  padding-top: 150px;
+  height: 100vh;
   color: #fff;
   position: relative;
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center bottom;
+  display: flex;
+  align-items: center;
   &::before,
   &::after {
     width: 100%;

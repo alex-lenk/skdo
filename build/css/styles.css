@@ -299,8 +299,11 @@ body {
   cursor: pointer;
   overflow: hidden;
   position: relative;
+  box-sizing: border-box;
   transition: all 0.3s linear;
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif; }
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  -ms-flex-item-align: start;
+      align-self: flex-start; }
   .btn svg {
     transition: all 0.3s linear; }
   .btn::before {
@@ -319,7 +322,7 @@ body {
     position: relative;
     z-index: 4; }
   .btn-light {
-    height: 42px;
+    height: 37px !important;
     padding-left: 20px;
     padding-right: 20px;
     line-height: 1;
@@ -344,12 +347,13 @@ body {
         height: 250px;
         opacity: 1; }
   .btn-black {
+    height: 37px !important;
     padding: 10px 20px;
     font-weight: bold;
     line-height: 1;
     color: #4b4644;
     border: 2px solid #4b4644;
-    font-size: 0.875rem; }
+    font-size: 1rem; }
     .btn-black::before {
       background: #4b4644; }
     .btn-black:hover {
@@ -375,7 +379,7 @@ body {
         height: 280px;
         opacity: 1; }
   .btn-link {
-    height: 42px;
+    height: 37px !important;
     margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
@@ -832,12 +836,17 @@ form.ajax_form input.error {
   transition: all 0.4s linear; }
 
 .header-home {
-  height: 790px;
-  padding-top: 150px;
+  height: 100vh;
   color: #fff;
   position: relative;
   background-repeat: no-repeat;
-  background-position: center top; }
+  background-position: center bottom;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
   .header-home::before, .header-home::after {
     width: 100%;
     height: inherit;
@@ -912,6 +921,7 @@ form.ajax_form input.error {
 
 .home-integrations__block-text {
   margin-bottom: 47px;
+  text-align: justify;
   font-size: 1.125rem; }
 
 .home-integrations__quest {
@@ -1009,7 +1019,7 @@ form.ajax_form input.error {
     margin-top: auto; }
 
 .news-section__analytics {
-  background-color: #e0e4e5; }
+  background-color: #ffffff; }
   .news-section__analytics .news-section__title a {
     color: #000; }
 
@@ -1154,6 +1164,10 @@ form.ajax_form input.error {
     margin-bottom: 55px; }
   .our-partners img {
     transition: opacity 0.3s ease; }
+  .our-partners .swiper-wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
 
 .partners-carousel__text {
   margin-top: 13px;
@@ -2117,13 +2131,13 @@ form.ajax_form input.error {
     background-color: #6faad7; }
 
 .main-content {
-  padding-top: 75px;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto; }
 
 .header-page {
   height: 512px;
+  padding-top: 60px;
   color: #fff;
   position: relative;
   overflow: hidden;
@@ -2131,11 +2145,7 @@ form.ajax_form input.error {
   background-image: url(../img/example/bg-news.jpg);
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: 0;
-  /*  &::before {
-      background-color: rgba(#000, .4);
-      z-index: 4;
-    }*/ }
+  background-size: 0; }
   .header-page::before, .header-page::after {
     width: 100%;
     height: inherit;

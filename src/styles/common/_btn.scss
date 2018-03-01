@@ -11,9 +11,10 @@
   cursor: pointer;
   overflow: hidden;
   position: relative;
+  box-sizing: border-box;
   transition: all 0.3s linear;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-
+  align-self: flex-start;
   svg {
     transition: all 0.3s linear;
   }
@@ -37,7 +38,7 @@
   }
 
   &-light {
-    height: 42px;
+    height: 37px !important;
     padding-left: 20px;
     padding-right: 20px;
     line-height: 1;
@@ -62,12 +63,13 @@
   }
 
   &-black {
+    height: 37px !important;
     padding: 10px 20px;
     font-weight: bold;
     line-height: 1;
     color: $mainColor;
     border: 2px solid $mainColor;
-    @include font-size(14px);
+    @include font-size(16px);
 
     &::before {
       background: $mainColor;
@@ -104,7 +106,7 @@
   }
 
   &-link {
-    height: 42px;
+    height: 37px !important;
     margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
