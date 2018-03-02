@@ -836,7 +836,7 @@ form.ajax_form input.error {
   transition: all 0.4s linear; }
 
 .header-home {
-  height: 100vh;
+  height: 790px;
   color: #fff;
   position: relative;
   background-repeat: no-repeat;
@@ -1027,7 +1027,8 @@ form.ajax_form input.error {
   color: #fff;
   background-color: #7ab6e4; }
   .news-section__services .news-section__title {
-    color: inherit; }
+    color: inherit;
+    font-weight: 300; }
   .news-section__services a {
     color: #fff; }
 
