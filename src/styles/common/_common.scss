@@ -298,3 +298,48 @@ body {
     background: linear-gradient(rgba(255, 255, 255, 0), #7ab6e4);
   }
 }
+
+.brand-color-dark-blue {
+  .system-block__back {
+    border-color: $hoverLinkColor;
+  }
+  .system-block__more {
+    background-color: $hoverLinkColor;
+  }
+}
+
+.brand-color-blue {
+  .system-block__back {
+    border-color: $linkColor;
+  }
+  .system-block__more {
+    background-color: $linkColor;
+  }
+  li::before {
+    background-color: $linkColor !important;
+  }
+}
+
+.brand-color-light-blue {
+  .system-block__back {
+    border-color: $lightBlueColor;
+  }
+  .system-block__more {
+    background-color: $lightBlueColor;
+  }
+  li::before {
+    background-color: $lightBlueColor !important;
+  }
+}
+
+.brand-color-red {
+  .system-block__back {
+    border-color: $redColor;
+  }
+  .system-block__more {
+    background-color: $redColor;
+  }
+  li::before {
+    background-color: $redColor !important;
+  }
+}
