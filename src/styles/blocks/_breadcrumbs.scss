@@ -1,19 +1,32 @@
-.breadcrumbs {padding-top: 15px;
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none;
-    display: flex;
-    align-self: flex-start;
-    li {
-        color: #d0d0d0;
-        @include font-size(15px);
-        &::after {
-            padding: 0 5px;
-            display: inline;
-            content: '/';
-        }
+.breadcrumbs {
+  padding-top: 15px;
+  padding-left: 0;
+  margin-top: 30px;
+  margin-bottom: 0;
+  list-style: none;
+  font-weight: 700;
+  line-height: 1;
+  display: flex;
+  align-self: flex-start;
+  li {
+    @include font-size(15px);
+    &:not(:last-child) {
+      &::after {
+        padding: 0 5px;
+        display: inline;
+        content: '/';
+      }
     }
-    a {
-        color: inherit;
+  }
+  a {
+    color: #fff;
+    border-bottom: 1px solid transparent;
+    &:hover {
+      border-bottom-color: #fff;
     }
+  }
+  .active {
+    color: #d0d0d0;
+    cursor: default;
+  }
 }

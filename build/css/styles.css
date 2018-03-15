@@ -33,7 +33,7 @@ body {
 a, .as-link {
   color: #7ab6e4;
   text-decoration: none;
-  transition: color 0.3s ease; }
+  transition: all 0.3s ease; }
   a:hover, .as-link:hover {
     color: #2c4896; }
   a:focus, .as-link:focus {
@@ -288,6 +288,39 @@ body {
     position: absolute;
     content: '';
     background: linear-gradient(rgba(255, 255, 255, 0), #7ab6e4); }
+
+.brand-color-dark-blue .system-block__back {
+  border-color: #2c4896; }
+
+.brand-color-dark-blue .system-block__more {
+  background-color: #2c4896; }
+
+.brand-color-blue .system-block__back {
+  border-color: #7ab6e4; }
+
+.brand-color-blue .system-block__more {
+  background-color: #7ab6e4; }
+
+.brand-color-blue li::before {
+  background-color: #7ab6e4 !important; }
+
+.brand-color-light-blue .system-block__back {
+  border-color: #83d0f4; }
+
+.brand-color-light-blue .system-block__more {
+  background-color: #83d0f4; }
+
+.brand-color-light-blue li::before {
+  background-color: #83d0f4 !important; }
+
+.brand-color-red .system-block__back {
+  border-color: #d12e27; }
+
+.brand-color-red .system-block__more {
+  background-color: #d12e27; }
+
+.brand-color-red li::before {
+  background-color: #d12e27 !important; }
 
 .btn {
   padding: 0;
@@ -1655,22 +1688,30 @@ form.ajax_form input.error {
 .breadcrumbs {
   padding-top: 15px;
   padding-left: 0;
+  margin-top: 30px;
   margin-bottom: 0;
   list-style: none;
+  font-weight: 700;
+  line-height: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-item-align: start;
       align-self: flex-start; }
   .breadcrumbs li {
-    color: #d0d0d0;
     font-size: 0.9375rem; }
-    .breadcrumbs li::after {
+    .breadcrumbs li:not(:last-child)::after {
       padding: 0 5px;
       display: inline;
       content: '/'; }
   .breadcrumbs a {
-    color: inherit; }
+    color: #fff;
+    border-bottom: 1px solid transparent; }
+    .breadcrumbs a:hover {
+      border-bottom-color: #fff; }
+  .breadcrumbs .active {
+    color: #d0d0d0;
+    cursor: default; }
 
 .vacancies-info {
   margin-top: -60px;
