@@ -985,14 +985,6 @@ form.ajax_form input.error {
   background-size: cover; }
   .news-section__general a {
     color: inherit; }
-  .news-section__general::before {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    content: ''; }
   .news-section__general .home-content-h3 {
     color: inherit; }
 
@@ -1852,6 +1844,9 @@ form.ajax_form input.error {
     display: block;
     font-size: 1.0625rem; }
 
+.contacts-page {
+  padding-top: 75px; }
+
 .panel-group {
   width: 100%;
   margin-bottom: 60px; }
@@ -2258,3 +2253,27 @@ form.ajax_form input.error {
 
 .zoom img::selection {
   background-color: transparent; }
+
+.not-found {
+  padding-top: 150px;
+  padding-bottom: 100px;
+  text-align: center;
+  background-color: #e9e9e9; }
+  .not-found::before {
+    width: 100%;
+    max-width: 694px;
+    height: 333px;
+    margin: 0 auto 50px;
+    display: block;
+    background: url(../img/bg-404.jpg) no-repeat center;
+    background-size: contain;
+    content: ''; }
+
+.not-found__title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 2.1875rem; }
+
+.not-found__text {
+  font-weight: 400;
+  font-size: 1.125rem; }

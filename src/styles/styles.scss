@@ -201,3 +201,31 @@
 .zoom img::selection {
   background-color: transparent;
 }
+
+.not-found {
+  padding-top: 150px;
+  padding-bottom: 100px;
+  text-align: center;
+  background-color: #e9e9e9;
+  &::before {
+    width: 100%;
+    max-width: 694px;
+    height: 333px;
+    margin: 0 auto 50px;
+    display: block;
+    background: url(../img/bg-404.jpg) no-repeat center;
+    background-size: contain;
+    content: '';
+  }
+}
+
+.not-found__title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  @include font-size(35px);
+}
+
+.not-found__text {
+  font-weight: 400;
+  @include font-size(18px);
+}
