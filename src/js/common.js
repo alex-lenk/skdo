@@ -141,5 +141,9 @@ $(document).ready(function () {
             crossFade: true
         }
     });
-});
 
+    $('a[data-click="clickLink"]').click(function(event) {
+        $(this).parent().toggleClass('open-level');
+        return false;
+    });
+});

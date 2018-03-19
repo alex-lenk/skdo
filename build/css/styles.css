@@ -354,6 +354,21 @@ body {
   .btn span {
     position: relative;
     z-index: 4; }
+  .btn-red {
+    padding: 10px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1;
+    color: #fff;
+    background-color: #d12e27;
+    font-size: 0.875rem; }
+    .btn-red::before {
+      background: #c1251e; }
+    .btn-red:hover {
+      color: #fff; }
+      .btn-red:hover::before {
+        height: 250px;
+        opacity: 1; }
   .btn-light {
     height: 37px !important;
     padding-left: 20px;
@@ -1052,8 +1067,7 @@ form.ajax_form input.error {
   color: #fff;
   background-color: #7ab6e4; }
   .news-section__services .news-section__title {
-    color: inherit;
-    font-weight: 300; }
+    color: inherit; }
   .news-section__services a {
     color: #fff; }
 
@@ -2321,3 +2335,7 @@ form.ajax_form input.error {
 .not-found__text {
   font-weight: 400;
   font-size: 1.125rem; }
+
+.aside-support {
+  margin-left: auto;
+  margin-right: auto; }

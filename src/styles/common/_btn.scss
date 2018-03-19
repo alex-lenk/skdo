@@ -37,6 +37,27 @@
     z-index: 4;
   }
 
+  &-red {
+    padding: 10px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1;
+    color: #fff;
+    background-color: $redColor;
+    @include font-size(14px);
+
+    &::before {
+      background: #c1251e;
+    }
+    &:hover {
+      color: #fff;
+      &::before {
+        height: 250px;
+        opacity: 1;
+      }
+    }
+  }
+
   &-light {
     height: 37px !important;
     padding-left: 20px;
@@ -174,16 +195,4 @@
   z-index: 2;
   content: '+';
   transition: color 0.3s linear;
-}
-
-.btn-pdf, .btn-doc, .btn-xls {
-}
-
-.btn-pdf {
-}
-
-.btn-doc {
-}
-
-.btn-xls {
 }

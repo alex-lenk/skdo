@@ -661,7 +661,6 @@
   .header__back-call {
     color: #d12e27;
     margin-top: 5px;
-    padding: 0;
     background-color: transparent; }
   .header-support {
     -webkit-box-orient: vertical;
