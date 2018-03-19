@@ -1,0 +1,53 @@
+.southern-open .southern-federal-district {
+  opacity: 1;
+}
+
+.central-open .central-federal-district {
+  opacity: 1;
+}
+
+.volga-open .volga-federal-district {
+  opacity: 1;
+}
+
+.ural-open .ural-federal-district {
+  opacity: 1;
+}
+
+.siberian-open .siberian-federal-district {
+  opacity: 1;
+}
+
+.far-eastern-open .far-eastern-federal-district {
+  opacity: 1;
+}
+
+.northwestern-open .northwestern-federal-district {
+  opacity: 1;
+}
+
+.north-open .north-federal-district {
+  opacity: 1;
+}
+
+.windows-wrap__item {
+  width: 360px;
+  padding: 50px 15px;
+  color: #2c4896;
+  font-weight: 700;
+  text-align: center;
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  z-index: 90;
+  background: #fff;
+  box-shadow: -2px 8px 70px rgba(13, 27, 79, .31);
+  transition: all 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+#russian-map svg {
+  max-width: 100%;
+}

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ru">
+<!-- include "template/head.html" -->
+<body class="page">
+<div class="wrapper">
+    <!-- include "template/header.html" -->
+
+    <div class="main-content">
+        <section class="header-page">
+            <div class="container">
+                <ul class="breadcrumbs list-styled">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li class="active">Новости компании</li>
+                </ul>
+                <div class="header-page__wrap">
+                    <h1>В Ростехнадзоре прошло совещание с саморегулируемыми организациями.</h1>
+                    <div>22.12.2017</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="page-container">
+            <div class="page-container__first container">
+                <div class="article-content">
+                    <div>
+                        <div class="southern-federal-district windows-wrap__item">
+                            Южный федеральный округ
+                        </div>
+                        <div class="central-federal-district windows-wrap__item">
+                            Центральный федеральный округ
+                        </div>
+                        <div class="volga-federal-district windows-wrap__item">
+                            Волжский федеральный округ
+                        </div>
+                        <div class="ural-federal-district windows-wrap__item">
+                            Уральский федеральный округ
+                        </div>
+                        <div class="siberian-federal-district windows-wrap__item">
+                            Сибирский федеральный округ
+                        </div>
+                        <div class="far-eastern-federal-district windows-wrap__item">
+                            Дальневосточный Федеральный округ
+                        </div>
+                        <div class="northwestern-federal-district windows-wrap__item">
+                            Северо-Западный федеральный округ
+                        </div>
+                        <div class="north-federal-district windows-wrap__item">
+                            Северо-Кавказский федеральный округ
+                        </div>
+                    </div>
+
+                    <div id="russian-map"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- include "template/footer.html" -->
+</div>
+
+<!-- include "template/scripts.html" -->
+
+<script src="js/raphael-min.js"></script>
+<script src="js/russian-map.js"></script>
+<script>
+    // запрос на получение json регионов
+    window.onload = function() {
+        fetch('js/with-districts.json').then(function(response) {
+            response.json().then(function(data) {
+                new RussianMap({
+                    viewPort: data.viewPort,
+                    mapId: 'russian-map',
+                    width: 1100,
+                    height: 550,
+                    // дефолтовые атрибуты для контуров регионов
+                    defaultAttr: {
+                        fill: '#7ab6e4', // цвет которым закрашивать
+                        stroke: '#ffffff', // цвет границы
+                        'stroke-width': 1, // ширина границы
+                        'stroke-linejoin': 'round' // скруглять углы
+                    },
+                    mouseMoveAttr: {
+                        fill: '#2c4896'
+                    },
+                    onMouseMove: function(event) {
+                        $('body').addClass(this.region.classdist);
+                    },
+                    onMouseOut: function(event) {
+                        $('body').removeClass(this.region.classdist);
+                    },
+                    onMouseClick: function(event) {
+                        $('body').toggleClass(this.region.classdist);
+                    }
+                }, data.regions);
+            });
+        });
+    };
+</script>
+
+<!-- include "template/modals.html" -->
+
+</body>
+</html>
